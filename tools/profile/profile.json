@@ -1,0 +1,262 @@
+{
+ "login": "gmetskhvarishvili",
+ "name": "Giorgi Metskhvarishvili",
+ "title": "Engineering Leader · Software & Solution Architect",
+ "focus": "Cloud-native & distributed systems · .NET",
+ "summary": "Engineering leader with 13+ years of experience designing and delivering large-scale distributed systems across banking, government, gaming and enterprise domains. I architect platforms from the ground up with Clean Architecture, CQRS, Domain-Driven Design and event-driven principles, and have led cross-functional organizations of up to 60 professionals.",
+ "location": "Tbilisi, Georgia",
+ "availability": "Open to new opportunities · on-site, hybrid or remote",
+ "years_experience": "13+",
+ "links": [
+  {
+   "id": "github",
+   "label": "GitHub",
+   "url": "https://github.com/gmetskhvarishvili"
+  },
+  {
+   "id": "nuget",
+   "label": "NuGet",
+   "url": "https://www.nuget.org/profiles/gmetskhvarishvili"
+  }
+ ],
+ "experience": [
+  {
+   "role": "Lead Software Architect",
+   "org": "MobileESports",
+   "when": "Dec 2022 – now",
+   "where": "Gaming & esports",
+   "note": "Architected a global esports platform from the ground up: 35+ microservices, ~80 gaming products, millions of users, 99.98% uptime and ~50 production deployments a week."
+  },
+  {
+   "role": "Software Engineering Team Lead",
+   "org": "Betsson Georgia",
+   "when": "Mar 2026 – Jun 2026",
+   "where": "Sports, gaming & betting",
+   "note": "Led ~15 engineers across five product teams; drove the modernization roadmap, archived 300+ repositories, decommissioned 50+ services and moved logging to Datadog and secrets to Doppler."
+  },
+  {
+   "role": "Associate Partner, Software Development Chapter Lead",
+   "org": "TBC Bank — Cards & Loyalty",
+   "when": "Jul 2024 – Mar 2026",
+   "where": "Banking",
+   "note": "Led backend chapters of 10–20 engineers supporting 10+ product teams across cards, loyalty, subscriptions and government-service integrations."
+  },
+  {
+   "role": "Software Solutions Architect",
+   "org": "Raffle Management Platform",
+   "when": "May 2024 – Oct 2025",
+   "where": "Marketing",
+   "note": "Designed the end-to-end architecture of a QR-code raffle platform with automated daily draws, rule-based winner selection and notifications."
+  },
+  {
+   "role": "Associate Partner, Software Development Chapter Lead",
+   "org": "TBC Bank — Digital Bank Transformation",
+   "when": "Apr 2023 – Sep 2024",
+   "where": "Banking",
+   "note": "Drove the insourcing of transfers, payments and accounts from vendor platforms; recruited 20+ engineers and supported the growth of 50+."
+  },
+  {
+   "role": "Deputy Head of IT Department",
+   "org": "Service Agency of the Ministry of Internal Affairs of Georgia",
+   "when": "Nov 2020 – Apr 2023",
+   "where": "Public sector",
+   "note": "Led ~60 professionals delivering nationwide platforms for vehicle registration, driving licences and firearms; 30+ integrations; legacy systems re-engineered into microservices."
+  },
+  {
+   "role": "Senior Software Developer",
+   "org": "TBC Bank — Core Banking Modernization",
+   "when": "May 2020 – Nov 2020",
+   "where": "Banking",
+   "note": "Built backend capabilities for an in-house replacement of the vendor-provided B6 core banking platform."
+  },
+  {
+   "role": "Software Solutions Architect",
+   "org": "Greennet",
+   "when": "Sep 2019 – May 2020",
+   "where": "Consulting",
+   "note": "Application performance monitoring and observability consulting with Cisco AppDynamics: assessments, solution design and proposals."
+  },
+  {
+   "role": "Senior Software Developer, Technical Lead",
+   "org": "Softx",
+   "when": "Jun 2018 – May 2020",
+   "where": "Insurance, media & services",
+   "note": "Led delivery of an insurance management platform (Global Benefits Georgia), the silksport.ge media platform, a salon booking platform and a document workflow system."
+  },
+  {
+   "role": "Android Developer",
+   "org": "Go Real Europe",
+   "when": "May 2019 – Apr 2020",
+   "where": "Travel & hospitality",
+   "note": "Sole Android developer of a customer-facing travel management application."
+  },
+  {
+   "role": "Senior Software Developer",
+   "org": "Treepex",
+   "when": "Nov 2017 – May 2018",
+   "where": "Environmental technology",
+   "note": "Customer, B2B and admin platforms, backend APIs and a native Android app for forest rangers."
+  },
+  {
+   "role": "Android Developer",
+   "org": "Tbilisi State University — Online Campus",
+   "when": "Sep 2017 – Dec 2017",
+   "where": "Education",
+   "note": "Grant-funded mobile platform connecting students with the university administration."
+  },
+  {
+   "role": "Software Developer Intern",
+   "org": "Ministry of Defence of Georgia",
+   "when": "Jun 2017 – Nov 2017",
+   "where": "Public sector",
+   "note": "Independently built Indact, a legal document management system adopted by the Legal Department."
+  },
+  {
+   "role": "Software Developer Intern",
+   "org": "Revenue Service of Georgia",
+   "when": "May 2016 – Jul 2016",
+   "where": "Government, tax & customs",
+   "note": "Android application development within the IT Department."
+  }
+ ],
+ "education": [
+  {
+   "degree": "Master of Information Technology Governance and Strategy",
+   "school": "Georgian American University",
+   "when": "2026 – now"
+  },
+  {
+   "degree": "Bachelor of Informatics",
+   "school": "Ivane Javakhishvili Tbilisi State University",
+   "when": "2013 – 2018"
+  }
+ ],
+ "featured_packages": [
+  {
+   "id": "GM.API",
+   "tag": "WEB API STARTER",
+   "blurb": "One AddGMAPI / UseGMAPI pair wires controllers, CORS, versioning, Swagger, FluentValidation, Serilog and middlewares.",
+   "tech": "ASP.NET Core · Serilog · Swagger"
+  },
+  {
+   "id": "GM.EntityFramework",
+   "tag": "DDD + EF CORE",
+   "blurb": "Entities, value objects, specifications, generic repository, unit of work and an auditing DbContext.",
+   "tech": "EF Core · DDD · Specification"
+  },
+  {
+   "id": "GM.Messaging",
+   "tag": "OUTBOX / INBOX",
+   "blurb": "Message bus in one call, with config-driven RabbitMQ, resilience and EF Core outbox/inbox persistence.",
+   "tech": "Wolverine · RabbitMQ · EF Core"
+  },
+  {
+   "id": "GM.Mediator",
+   "tag": "CQRS",
+   "blurb": "Lightweight, DI-friendly mediator: send, publish and pipeline behaviors, no heavy dependencies.",
+   "tech": "CQRS · Pipelines · DI"
+  },
+  {
+   "id": "GM.HttpClient",
+   "tag": "RESILIENCE",
+   "blurb": "Refit clients with configurable Polly retry, circuit breaker, timeout and fallback, plus delegating handlers.",
+   "tech": "Refit · Polly"
+  },
+  {
+   "id": "GM.Exceptions",
+   "tag": "ERROR MODEL",
+   "blurb": "Reusable exception types: a common base, HTTP-style errors and a FluentValidation-aware ValidationException.",
+   "tech": "FluentValidation · ProblemDetails"
+  },
+  {
+   "id": "GM.Caching",
+   "tag": "SINGLE-FLIGHT",
+   "blurb": "ICacheService with GetOrCreateAsync (no cache stampede), in-memory and Redis backends.",
+   "tech": "Memory · Redis"
+  },
+  {
+   "id": "GM.DistributedLock",
+   "tag": "CONCURRENCY",
+   "blurb": "IDistributedLock with TryAcquire / Acquire returning an IAsyncDisposable handle that releases on dispose.",
+   "tech": "Locks · Async"
+  }
+ ],
+ "stack": [
+  {
+   "group": "Architecture",
+   "items": [
+    "Clean Architecture",
+    "CQRS",
+    "Domain-Driven Design",
+    "Event-Driven Design",
+    "Microservices",
+    "Distributed Systems",
+    "Event Storming"
+   ]
+  },
+  {
+   "group": "Languages",
+   "items": [
+    "C#",
+    "Java",
+    "Kotlin",
+    "Swift",
+    "JavaScript"
+   ]
+  },
+  {
+   "group": "Frameworks",
+   "items": [
+    ".NET",
+    "ASP.NET Core",
+    "Entity Framework",
+    "SignalR",
+    "Identity Server 4",
+    "MediatR",
+    "Quartz",
+    "Angular",
+    "React",
+    "Android SDK"
+   ]
+  },
+  {
+   "group": "Data & Messaging",
+   "items": [
+    "PostgreSQL",
+    "MS SQL",
+    "Oracle",
+    "Redis",
+    "Valkey",
+    "Elasticsearch",
+    "RabbitMQ",
+    "Apache Kafka"
+   ]
+  },
+  {
+   "group": "Cloud & DevOps",
+   "items": [
+    "AWS",
+    "Microsoft Azure",
+    "Docker",
+    "Kubernetes",
+    "Argo CD",
+    "Rancher",
+    "OpenShift",
+    "Terraform",
+    "HashiCorp Vault",
+    "Doppler"
+   ]
+  },
+  {
+   "group": "Observability",
+   "items": [
+    "Datadog",
+    "Dynatrace",
+    "Elastic APM",
+    "Grafana",
+    "Graylog",
+    "Cisco AppDynamics"
+   ]
+  }
+ ]
+}
