@@ -567,6 +567,7 @@ def write_readme(p, c, tops, samples, shown) -> None:
     L.append(img("highlights.svg", f"At a glance: {p['years_experience']} years of experience, {ng['package_count']} NuGet packages, "
                                    f"{fmt(ng['total_downloads'])} downloads, {c['github']['public_repos']} public repositories, "
                                    f"{c['github']['contributions_last_year']} contributions in the last year"))
+    L.append(img("expertise.svg", "Technical expertise"))
     L.append(img("experience.svg", "Experience: " + "; ".join(f"{e['role']}, {e['org']}" for e in p["experience"][:5])))
     L.append(img("education.svg", "Education: " + "; ".join(f"{e['degree']}, {e['school']}" for e in p["education"])))
     L.append(img("packages.svg", "NuGet packages, most downloaded first"))
@@ -580,7 +581,6 @@ def write_readme(p, c, tops, samples, shown) -> None:
         L += row(tiles, 3, "33.33%")
         L.append(f'<a href="https://github.com/{p["login"]}?tab=repositories&q=Samples">'
                  f'{img("all-samples.svg", "View all sample repositories on GitHub")}</a>')
-    L.append(img("expertise.svg", "Technical expertise"))
     L.append(img("footer.svg", "Last updated"))
     L.append("</p>")
     (ROOT / "README.md").write_text("\n".join(L) + "\n", encoding="utf-8")
