@@ -131,56 +131,6 @@
    "when": "2013 – 2018"
   }
  ],
- "featured_packages": [
-  {
-   "id": "GM.API",
-   "tag": "WEB API STARTER",
-   "blurb": "One AddGMAPI / UseGMAPI pair wires controllers, CORS, versioning, Swagger, FluentValidation, Serilog and middlewares.",
-   "tech": "ASP.NET Core · Serilog · Swagger"
-  },
-  {
-   "id": "GM.EntityFramework",
-   "tag": "DDD + EF CORE",
-   "blurb": "Entities, value objects, specifications, generic repository, unit of work and an auditing DbContext.",
-   "tech": "EF Core · DDD · Specification"
-  },
-  {
-   "id": "GM.Messaging",
-   "tag": "OUTBOX / INBOX",
-   "blurb": "Message bus in one call, with config-driven RabbitMQ, resilience and EF Core outbox/inbox persistence.",
-   "tech": "Wolverine · RabbitMQ · EF Core"
-  },
-  {
-   "id": "GM.Mediator",
-   "tag": "CQRS",
-   "blurb": "Lightweight, DI-friendly mediator: send, publish and pipeline behaviors, no heavy dependencies.",
-   "tech": "CQRS · Pipelines · DI"
-  },
-  {
-   "id": "GM.HttpClient",
-   "tag": "RESILIENCE",
-   "blurb": "Refit clients with configurable Polly retry, circuit breaker, timeout and fallback, plus delegating handlers.",
-   "tech": "Refit · Polly"
-  },
-  {
-   "id": "GM.Exceptions",
-   "tag": "ERROR MODEL",
-   "blurb": "Reusable exception types: a common base, HTTP-style errors and a FluentValidation-aware ValidationException.",
-   "tech": "FluentValidation · ProblemDetails"
-  },
-  {
-   "id": "GM.Caching",
-   "tag": "SINGLE-FLIGHT",
-   "blurb": "ICacheService with GetOrCreateAsync (no cache stampede), in-memory and Redis backends.",
-   "tech": "Memory · Redis"
-  },
-  {
-   "id": "GM.DistributedLock",
-   "tag": "CONCURRENCY",
-   "blurb": "IDistributedLock with TryAcquire / Acquire returning an IAsyncDisposable handle that releases on dispose.",
-   "tech": "Locks · Async"
-  }
- ],
  "stack": [
   {
    "group": "Architecture",
@@ -258,5 +208,6 @@
     "Cisco AppDynamics"
    ]
   }
- ]
+ ],
+ "top_packages": 8
 }

@@ -36,7 +36,13 @@ def fetch_nuget() -> dict:
             if isinstance(owners, str):
                 owners = [owners]
             if LOGIN.lower() in (o.lower() for o in owners):
-                packages.append({"id": p["id"], "version": p["version"], "downloads": int(p.get("totalDownloads", 0))})
+                packages.append({
+                    "id": p["id"],
+                    "version": p["version"],
+                    "downloads": int(p.get("totalDownloads", 0)),
+                    "description": (p.get("description") or "").strip(),
+                    "tags": (p.get("tags") or [])[:6],
+                })
         skip += 200
         if skip >= res.get("totalHits", 0) or not res["data"]:
             break
@@ -50,11 +56,13 @@ QUERY = """
 query($login: String!) {
   user(login: $login) {
     followers { totalCount }
-    repositories(privacy: PUBLIC, ownerAffiliations: OWNER) { totalCount }
+    repositories(first: 100, privacy: PUBLIC, ownerAffiliations: OWNER, orderBy: {field: NAME, direction: ASC}) {
+      totalCount
+      nodes { name description url stargazerCount pushedAt primaryLanguage { name } }
+    }
     contributionsCollection {
       contributionCalendar {
         totalContributions
-        weeks { contributionDays { date contributionCount } }
       }
     }
   }
@@ -71,12 +79,19 @@ def fetch_github() -> dict:
         raise RuntimeError(res["errors"])
     u = res["data"]["user"]
     cal = u["contributionsCollection"]["contributionCalendar"]
-    days = [[d["date"], d["contributionCount"]] for w in cal["weeks"] for d in w["contributionDays"]]
+    repos = [{
+        "name": r["name"],
+        "description": r["description"] or "",
+        "url": r["url"],
+        "stars": r["stargazerCount"],
+        "pushed_at": r["pushedAt"],
+        "language": (r["primaryLanguage"] or {}).get("name"),
+    } for r in u["repositories"]["nodes"]]
     return {
         "public_repos": u["repositories"]["totalCount"],
         "followers": u["followers"]["totalCount"],
         "contributions_last_year": cal["totalContributions"],
-        "calendar": days,
+        "repos": repos,
     }
 
 

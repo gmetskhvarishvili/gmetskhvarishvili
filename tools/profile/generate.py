@@ -246,8 +246,7 @@ ICONS = {
 def link_button(link, side: str) -> Svg:
     w, h = 440, 76
     svg = Svg(w, h, link["label"], f"{link['label']}: {link['url']}")
-    x0 = 0.5 if side == "left" else 6.5
-    bw = w - 7
+    x0, bw = tiles_x(0 if side == "left" else 1, 2, w)
     svg.add(f'<rect x="{x0}" y="6.5" width="{bw}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
     svg.add(f'<g transform="translate({x0+22} 26)">{ICONS[link["id"]].replace("{c}", TEXT)}</g>')
     svg.text(x0 + 62, 35, link["label"], size=15, fill=TEXT, weight=600)
@@ -333,16 +332,37 @@ def education(p, c) -> Svg:
     return svg
 
 
-def oss_head(p, c) -> Svg:
-    ng = c["nuget"]
-    desc = (f"Open source: {ng['package_count']} NuGet packages for .NET with {fmt(ng['total_downloads'])} downloads, "
-            "each with a runnable sample repository.")
-    lines = wrap("The GM.* family: production-ready building blocks for ASP.NET Core services on .NET 10, "
-                 "each published with a runnable sample repository.", 14, W - 2 * PAD)
+def clamp(s: str, size: float, width: float, max_lines: int, weight: int = 400) -> list[str]:
+    """Wrap and cut to max_lines, ending with an ellipsis when text was dropped."""
+    lines = wrap(s, size, width, weight)
+    if len(lines) <= max_lines:
+        return lines
+    out = lines[:max_lines]
+    last = out[-1]
+    while last and tw(last + "…", size, weight) > width:
+        last = last.rsplit(" ", 1)[0] if " " in last else last[:-1]
+    out[-1] = last.rstrip(" ,;:—-") + "…"
+    return out
+
+
+def first_sentence(s: str) -> str:
+    import re
+    parts = re.split(r"(?<=[.!?])\s", (s or "").strip(), maxsplit=1)
+    return parts[0] if parts else ""
+
+
+def tiles_x(col: int, cols: int, tile_w: float, gap: float = 6) -> tuple[float, float]:
+    """x offset and width of a tile's box so that adjacent images leave an even gap."""
+    rw = (W - gap * (cols - 1)) / cols
+    return col * (rw + gap) - col * tile_w + 0.5, rw - 1
+
+
+def section_head(p, c, title: str, right: str, text: str, alt: str) -> Svg:
+    lines = wrap(text, 14, W - 2 * PAD)
     H = 62 + 21 * len(lines) + 16
-    svg = Svg(W, H, "Open source", desc)
+    svg = Svg(W, H, title, alt)
     panel(svg)
-    section_title(svg, "Open source", right=f"{ng['package_count']} packages  ·  {fmt(ng['total_downloads'])} downloads")
+    section_title(svg, title, right=right)
     y = 76
     for ln in lines:
         svg.text(PAD, y, ln, size=14, fill=SUB)
@@ -350,53 +370,97 @@ def oss_head(p, c) -> Svg:
     return svg
 
 
-def family_stats(pkg_id: str, packages: list[dict]) -> tuple[int, str]:
-    total, version = 0, ""
-    for x in packages:
-        if x["id"] == pkg_id or x["id"].startswith(pkg_id + "."):
-            total += x["downloads"]
-            if x["id"] == pkg_id:
-                version = x["version"]
-    return total, version
+def top_packages(c, n: int) -> list[dict]:
+    return sorted(c["nuget"]["packages"], key=lambda x: -x["downloads"])[:n]
 
 
-def card(fp, c, side: str) -> Svg:
-    w, h = 440, 192
-    total, version = family_stats(fp["id"], c["nuget"]["packages"])
-    desc = f"{fp['id']}: {fp['blurb']} {fp['tech']}." + (f" {fmt(total)} downloads." if total else "")
-    svg = Svg(w, h, fp["id"], desc)
-    x0 = 0.5 if side == "left" else 6.5
-    cw = w - 7
-    svg.add(f'<rect x="{x0}" y="6.5" width="{cw}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
+def package_card(pkg: dict, rank: int, col: int) -> Svg:
+    w, h = W / 2, 196
+    x0, cw = tiles_x(col, 2, w)
+    desc_text = pkg.get("description") or ""
+    tags = [t for t in (pkg.get("tags") or []) if t.lower() not in ("dotnet", ".net", "csharp")][:3]
+    desc = f"{pkg['id']} v{pkg['version']}: {desc_text} {fmt(pkg['downloads'])} downloads."
+    svg = Svg(round(w), h, pkg["id"], desc)
+    svg.add(f'<rect x="{x0:.1f}" y="6.5" width="{cw:.1f}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
     ix = x0 + 22
-    svg.text(ix, 40, fp["tag"].upper(), size=10.5, fill=MUTED, weight=600, tracking=1.2)
-    svg.text(ix, 66, fp["id"], size=19, fill=TEXT, weight=600)
+    inner = cw - 44
+    svg.text(ix, 40, f"#{rank} BY DOWNLOADS", size=10.5, fill=ACCENT if rank == 1 else MUTED, weight=600, tracking=1.2)
+    svg.text(ix, 66, pkg["id"], size=19, fill=TEXT, weight=600)
     y = 92
-    for ln in wrap(fp["blurb"], 13, cw - 44)[:3]:
+    for ln in clamp(desc_text, 13, inner, 3):
         svg.text(ix, y, ln, size=13, fill=SUB)
         y += 19
     by = h - 24
-    svg.add(f'<line x1="{ix}" y1="{by-20}" x2="{x0+cw-22}" y2="{by-20}" stroke="{RULE}"/>')
-    svg.text(ix, by, fp["tech"], size=12, fill=MUTED)
-    right = []
-    if version:
-        right.append((f"v{version}", MUTED))
-    if total:
-        right += [("    ", MUTED), (fmt(total), TEXT, 600), (" downloads", MUTED)]
-    if right:
-        svg.spans(x0 + cw - 22, by, right, size=12, anchor="end")
+    svg.add(f'<line x1="{ix:.1f}" y1="{by-20}" x2="{x0+cw-22:.1f}" y2="{by-20}" stroke="{RULE}"/>')
+    right = [(f"v{pkg['version']}", MUTED), ("    ", MUTED), (fmt(pkg["downloads"]), TEXT, 600), (" downloads", MUTED)]
+    rw = tw(f"v{pkg['version']}    ", 12) + tw(fmt(pkg["downloads"]), 12, 600) + tw(" downloads", 12)
+    tag_line = "  ·  ".join(tags)
+    while tag_line and tw(tag_line, 12) > inner - rw - 16:
+        tags = tags[:-1]
+        tag_line = "  ·  ".join(tags)
+    if tag_line:
+        svg.text(ix, by, tag_line, size=12, fill=MUTED)
+    svg.spans(x0 + cw - 22, by, right, size=12, anchor="end")
     return svg
 
 
-def all_packages(p, c) -> Svg:
-    ng = c["nuget"]
-    svg = Svg(W, 56, "All packages", f"View all {ng['package_count']} packages on NuGet.")
+def wide_button(label: str, desc: str) -> Svg:
+    svg = Svg(W, 56, label, desc)
     svg.add(f'<rect x="0.5" y="6.5" width="{W-1}" height="43" rx="10" fill="{BG}" stroke="{BORDER}"/>')
-    label = f"View all {ng['package_count']} packages on NuGet"
     lw = tw(label, 13.5, 500)
     x = W / 2 - (lw + 22) / 2
     svg.text(x, 33, label, size=13.5, fill=ACCENT, weight=500)
     arrow(svg, x + lw + 15, 28.5, ACCENT, s=4)
+    return svg
+
+
+SAMPLE_RE = r"^GM\..+\.Samples$"
+
+
+def sample_repos(c) -> list[dict]:
+    import re
+    repos = [r for r in c["github"].get("repos", []) if re.match(SAMPLE_RE, r["name"], re.I)]
+    pk = c["nuget"]["packages"]
+
+    def family(r):
+        base = r["name"][: -len(".Samples")]
+        total = sum(x["downloads"] for x in pk if x["id"].lower() == base.lower() or x["id"].lower().startswith(base.lower() + "."))
+        main = next((x for x in pk if x["id"].lower() == base.lower()), None)
+        return base, total, main
+
+    out = []
+    for r in repos:
+        base, total, main = family(r)
+        out.append({**r, "base": main["id"] if main else base, "family_downloads": total,
+                    "summary": r.get("description") or first_sentence((main or {}).get("description", ""))})
+    out.sort(key=lambda r: (-r["family_downloads"], r["name"].lower()))
+    return out
+
+
+def sample_tile(r: dict, col: int) -> Svg:
+    w, h = W / 3, 138
+    x0, cw = tiles_x(col, 3, w)
+    desc = f"{r['name']}: runnable sample for {r['base']}. {r['summary']}"
+    svg = Svg(round(w, 2), h, r["name"], desc)
+    svg.add(f'<rect x="{x0:.1f}" y="6.5" width="{cw:.1f}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
+    ix = x0 + 18
+    inner = cw - 36
+    name = r["name"]
+    size = 14
+    while tw(name, size, 600) > inner and size > 11:
+        size -= 0.5
+    svg.text(ix, 38, name, size=size, fill=TEXT, weight=600)
+    y = 60
+    for ln in clamp(r["summary"] or f"Runnable sample for {r['base']}.", 12, inner, 2):
+        svg.text(ix, y, ln, size=12, fill=SUB)
+        y += 17
+    by = h - 22
+    lang = r.get("language") or "C#"
+    svg.add(f'<circle cx="{ix+4:.1f}" cy="{by-4}" r="4" fill="#178600"/>')
+    svg.text(ix + 14, by, lang, size=11.5, fill=MUTED)
+    stars = r.get("stars", 0)
+    right = [(f"★ {stars}", MUTED)] if stars else [("Sample app", MUTED)]
+    svg.spans(x0 + cw - 18, by, right, size=11.5, anchor="end")
     return svg
 
 
@@ -448,53 +512,74 @@ def footer(p, c) -> Svg:
 def main() -> None:
     p = json.loads((HERE / "profile.json").read_text(encoding="utf-8"))
     c = json.loads((HERE / "cache.json").read_text(encoding="utf-8"))
-    for d in (ASSETS, ASSETS / "links", ASSETS / "packages"):
+    for d in (ASSETS, ASSETS / "links", ASSETS / "packages", ASSETS / "samples"):
         d.mkdir(parents=True, exist_ok=True)
+    ng = c["nuget"]
+    tops = top_packages(c, p.get("top_packages", 8))
+    samples = sample_repos(c)
+    shown = samples[: len(samples) // 3 * 3] if len(samples) > 3 else samples
     out = {
         "header.svg": header(p, c),
         "highlights.svg": highlights(p, c),
         "experience.svg": experience(p, c),
         "education.svg": education(p, c),
-        "open-source.svg": oss_head(p, c),
-        "all-packages.svg": all_packages(p, c),
+        "packages.svg": section_head(
+            p, c, "NuGet packages", f"{ng['package_count']} packages  ·  {fmt(ng['total_downloads'])} downloads",
+            "My most downloaded packages from the GM.* family: production-ready building blocks for ASP.NET Core services on .NET 10.",
+            f"NuGet packages: {ng['package_count']} packages with {fmt(ng['total_downloads'])} downloads. The most downloaded are shown below."),
+        "all-packages.svg": wide_button(f"View all {ng['package_count']} packages on NuGet", "View all packages on NuGet."),
+        "samples.svg": section_head(
+            p, c, "Sample projects", f"{len(samples)} repositories",
+            "Runnable ASP.NET Core applications showing each GM.* package in a realistic setting, with CI, tests and documentation.",
+            f"Sample projects: {len(samples)} open-source GM.*.Samples repositories on GitHub."),
+        "all-samples.svg": wide_button(f"View all {len(samples)} sample repositories on GitHub", "View all sample repositories on GitHub."),
         "expertise.svg": expertise(p, c),
         "footer.svg": footer(p, c),
     }
     for i, l in enumerate(p["links"]):
         out[f"links/{l['id']}.svg"] = link_button(l, "left" if i % 2 == 0 else "right")
-    for i, fp in enumerate(p["featured_packages"]):
-        out[f"packages/{fp['id']}.svg"] = card(fp, c, "left" if i % 2 == 0 else "right")
+    for i, pkg in enumerate(tops):
+        out[f"packages/{pkg['id']}.svg"] = package_card(pkg, i + 1, i % 2)
+    for i, r in enumerate(shown):
+        out[f"samples/{r['name']}.svg"] = sample_tile(r, i % 3)
     keep = set(out)
-    for f in list(ASSETS.rglob("*.svg")):  # drop panels from older layouts
+    for f in list(ASSETS.rglob("*.svg")):  # drop panels that are no longer used
         if f.relative_to(ASSETS).as_posix() not in keep:
             f.unlink()
     for name, svg in out.items():
         (ASSETS / name).write_text(svg.render(), encoding="utf-8")
-    write_readme(p, c)
+    write_readme(p, c, tops, samples, shown)
     print(f"wrote {len(out)} panels + README.md")
 
 
-def write_readme(p, c) -> None:
+def write_readme(p, c, tops, samples, shown) -> None:
     ng = c["nuget"]
 
     def img(src, alt, width="100%"):
         return f'<img src="./assets/{src}" width="{width}" align="top" alt="{escape(alt, quote=True)}">'
 
+    def row(items, per, width):
+        return ["".join(items[i:i + per]) for i in range(0, len(items), per)]
+
     L = ['<p align="center">']
     L.append(img("header.svg", f"{p['name']} — {p['title']}. {p['summary']}"))
     L.append("".join(f'<a href="{l["url"]}">{img("links/" + l["id"] + ".svg", l["label"], "50%")}</a>' for l in p["links"]))
-    L.append(img("highlights.svg", f"At a glance: {ng['package_count']} NuGet packages, {fmt(ng['total_downloads'])} downloads, "
-                                   f"{p['years_experience']} years of experience, {c['github']['public_repos']} public repositories, {c['github']['contributions_last_year']} contributions in the last year"))
+    L.append(img("highlights.svg", f"At a glance: {p['years_experience']} years of experience, {ng['package_count']} NuGet packages, "
+                                   f"{fmt(ng['total_downloads'])} downloads, {c['github']['public_repos']} public repositories, "
+                                   f"{c['github']['contributions_last_year']} contributions in the last year"))
     L.append(img("experience.svg", "Experience: " + "; ".join(f"{e['role']}, {e['org']}" for e in p["experience"][:5])))
     L.append(img("education.svg", "Education: " + "; ".join(f"{e['degree']}, {e['school']}" for e in p["education"])))
-    L.append(img("open-source.svg", "Open source: the GM.* package family"))
-    fps = p["featured_packages"]
-    for i in range(0, len(fps), 2):
-        L.append("".join(
-            f'<a href="https://www.nuget.org/packages/{fp["id"]}">'
-            f'{img("packages/" + fp["id"] + ".svg", fp["id"] + " — " + fp["blurb"], "50%")}</a>'
-            for fp in fps[i:i + 2]))
+    L.append(img("packages.svg", "NuGet packages, most downloaded first"))
+    cards = [f'<a href="https://www.nuget.org/packages/{x["id"]}">'
+             f'{img("packages/" + x["id"] + ".svg", x["id"] + " — " + fmt(x["downloads"]) + " downloads", "50%")}</a>' for x in tops]
+    L += row(cards, 2, "50%")
     L.append(f'<a href="https://www.nuget.org/profiles/{p["login"]}">{img("all-packages.svg", "View all packages on NuGet")}</a>')
+    if samples:
+        L.append(img("samples.svg", "Sample projects: GM.*.Samples repositories"))
+        tiles = [f'<a href="{r["url"]}">{img("samples/" + r["name"] + ".svg", r["name"], "33.33%")}</a>' for r in shown]
+        L += row(tiles, 3, "33.33%")
+        L.append(f'<a href="https://github.com/{p["login"]}?tab=repositories&q=Samples">'
+                 f'{img("all-samples.svg", "View all sample repositories on GitHub")}</a>')
     L.append(img("expertise.svg", "Technical expertise"))
     L.append(img("footer.svg", "Last updated"))
     L.append("</p>")
