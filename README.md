@@ -1,16 +1,15 @@
-## Hi there 👋
-
-<!--
-**gmetskhvarishvili/gmetskhvarishvili** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center">
+<img src="./assets/header.svg" width="100%" align="top" alt="Giorgi Metskhvarishvili — Engineering Leader · Software &amp; Solution Architect. Engineering leader with 13+ years of experience designing and delivering large-scale distributed systems across banking, government, gaming and enterprise domains. I architect platforms from the ground up with Clean Architecture, CQRS, Domain-Driven Design and event-driven principles, and have led cross-functional organizations of up to 60 professionals.">
+<a href="https://github.com/gmetskhvarishvili"><img src="./assets/links/github.svg" width="50%" align="top" alt="GitHub"></a><a href="https://www.nuget.org/profiles/gmetskhvarishvili"><img src="./assets/links/nuget.svg" width="50%" align="top" alt="NuGet"></a>
+<img src="./assets/highlights.svg" width="100%" align="top" alt="At a glance: 78 NuGet packages, 37,555 downloads, 13+ years of experience, 26 public repositories, 378 contributions in the last year">
+<img src="./assets/experience.svg" width="100%" align="top" alt="Experience: Lead Software Architect, MobileESports; Software Engineering Team Lead, Betsson Georgia; Associate Partner, Software Development Chapter Lead, TBC Bank — Cards &amp; Loyalty; Software Solutions Architect, Raffle Management Platform; Associate Partner, Software Development Chapter Lead, TBC Bank — Digital Bank Transformation">
+<img src="./assets/education.svg" width="100%" align="top" alt="Education: Master of Information Technology Governance and Strategy, Georgian American University; Bachelor of Informatics, Ivane Javakhishvili Tbilisi State University">
+<img src="./assets/open-source.svg" width="100%" align="top" alt="Open source: the GM.* package family">
+<a href="https://www.nuget.org/packages/GM.API"><img src="./assets/packages/GM.API.svg" width="50%" align="top" alt="GM.API — One AddGMAPI / UseGMAPI pair wires controllers, CORS, versioning, Swagger, FluentValidation, Serilog and middlewares."></a><a href="https://www.nuget.org/packages/GM.EntityFramework"><img src="./assets/packages/GM.EntityFramework.svg" width="50%" align="top" alt="GM.EntityFramework — Entities, value objects, specifications, generic repository, unit of work and an auditing DbContext."></a>
+<a href="https://www.nuget.org/packages/GM.Messaging"><img src="./assets/packages/GM.Messaging.svg" width="50%" align="top" alt="GM.Messaging — Message bus in one call, with config-driven RabbitMQ, resilience and EF Core outbox/inbox persistence."></a><a href="https://www.nuget.org/packages/GM.Mediator"><img src="./assets/packages/GM.Mediator.svg" width="50%" align="top" alt="GM.Mediator — Lightweight, DI-friendly mediator: send, publish and pipeline behaviors, no heavy dependencies."></a>
+<a href="https://www.nuget.org/packages/GM.HttpClient"><img src="./assets/packages/GM.HttpClient.svg" width="50%" align="top" alt="GM.HttpClient — Refit clients with configurable Polly retry, circuit breaker, timeout and fallback, plus delegating handlers."></a><a href="https://www.nuget.org/packages/GM.Exceptions"><img src="./assets/packages/GM.Exceptions.svg" width="50%" align="top" alt="GM.Exceptions — Reusable exception types: a common base, HTTP-style errors and a FluentValidation-aware ValidationException."></a>
+<a href="https://www.nuget.org/packages/GM.Caching"><img src="./assets/packages/GM.Caching.svg" width="50%" align="top" alt="GM.Caching — ICacheService with GetOrCreateAsync (no cache stampede), in-memory and Redis backends."></a><a href="https://www.nuget.org/packages/GM.DistributedLock"><img src="./assets/packages/GM.DistributedLock.svg" width="50%" align="top" alt="GM.DistributedLock — IDistributedLock with TryAcquire / Acquire returning an IAsyncDisposable handle that releases on dispose."></a>
+<a href="https://www.nuget.org/profiles/gmetskhvarishvili"><img src="./assets/all-packages.svg" width="100%" align="top" alt="View all packages on NuGet"></a>
+<img src="./assets/expertise.svg" width="100%" align="top" alt="Technical expertise">
+<img src="./assets/footer.svg" width="100%" align="top" alt="Last updated">
+</p>
