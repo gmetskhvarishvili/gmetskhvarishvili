@@ -7,1864 +7,1278 @@
    {
     "id": "GM.Exceptions",
     "version": "1.2.2",
-    "downloads": 2579
+    "downloads": 2579,
+    "description": "A collection of reusable exception types for .NET apps \u2014 a common base exception, HTTP-style exceptions (not found, bad request, already exists, ...), and a FluentValidation-aware ValidationException.",
+    "tags": [
+     "exceptions",
+     "exception-handling",
+     "validation",
+     "fluentvalidation",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Mediator",
     "version": "1.3.5",
-    "downloads": 1866
+    "downloads": 1866,
+    "description": "A lightweight, dependency-injection-friendly mediator (send, publish, pipeline behaviors) for .NET.",
+    "tags": [
+     "mediator",
+     "cqrs",
+     "mediatr",
+     "messaging",
+     "pipeline",
+     "dependency-injection"
+    ]
    },
    {
     "id": "GM.EntityFramework.Domain",
     "version": "1.3.0",
-    "downloads": 1618
+    "downloads": 1618,
+    "description": "Domain building blocks \u2014 entities, value objects, specifications, results, and repository/unit-of-work abstractions \u2014 for DDD-style apps on Entity Framework Core.",
+    "tags": [
+     "entity-framework-core",
+     "ddd",
+     "domain",
+     "specification",
+     "repository",
+     "unit-of-work"
+    ]
    },
    {
     "id": "GM.EntityFramework.Persistence",
     "version": "1.3.0",
-    "downloads": 1451
+    "downloads": 1451,
+    "description": "EF Core persistence for GM.EntityFramework.Domain \u2014 a generic repository, unit of work with transactions, and an auditing DbContext.",
+    "tags": [
+     "entity-framework-core",
+     "persistence",
+     "repository",
+     "unit-of-work",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Mapper",
     "version": "1.3.3",
-    "downloads": 1328
+    "downloads": 1328,
+    "description": "A tiny, dependency-injection-friendly object mapper for .NET, built on Mapster.",
+    "tags": [
+     "mapper",
+     "mapping",
+     "mapster",
+     "object-mapping",
+     "dependency-injection",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.EntityFramework",
     "version": "1.3.0",
-    "downloads": 1101
+    "downloads": 1101,
+    "description": "A DDD + EF Core toolkit for .NET. This meta-package bundles GM.EntityFramework.Domain and GM.EntityFramework.Persistence.",
+    "tags": [
+     "entity-framework-core",
+     "ddd",
+     "repository",
+     "unit-of-work",
+     "specification",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.API.Application",
     "version": "1.6.0",
-    "downloads": 1071
+    "downloads": 1071,
+    "description": "Application-layer building blocks for the GM.API stack: GM.Mediator wiring plus validation and performance pipeline behaviours, and paged-list models. Part of the GM.API family.",
+    "tags": [
+     "mediator",
+     "pipeline-behavior",
+     "validation",
+     "cqrs",
+     "application-layer",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Documentation",
     "version": "1.3.1",
-    "downloads": 1062
+    "downloads": 1062,
+    "description": "A lightweight, configuration-driven Swagger/OpenAPI setup for ASP.NET Core. One call wires up Swashbuckle with API versioning, FluentValidation rules, OAuth2 security, required-header parameters, custom date formats, and a styled Swagger UI \u2014 all from configuration.",
+    "tags": [
+     "swagger",
+     "openapi",
+     "documentation",
+     "swashbuckle",
+     "api-versioning",
+     "fluentvalidation"
+    ]
    },
    {
     "id": "GM.API",
     "version": "1.6.0",
-    "downloads": 1022
+    "downloads": 1022,
+    "description": "An opinionated ASP.NET Core Web API starter for .NET. A single AddGMAPI/UseGMAPI pair wires up controllers, CORS, API versioning, Swagger docs, FluentValidation, Serilog, and middlewares for exception handling, request logging (with sensitive-data masking) and request localization. Bundles the GM.API.* companion packages.",
+    "tags": [
+     "aspnetcore",
+     "web-api",
+     "middleware",
+     "cors",
+     "api-versioning",
+     "serilog"
+    ]
    },
    {
     "id": "GM.API.Shared",
     "version": "1.6.0",
-    "downloads": 940
+    "downloads": 940,
+    "description": "Shared primitives for the GM.API stack, built on GM.Mapper. Part of the GM.API family.",
+    "tags": [
+     "shared",
+     "mapper",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.API.Middlewares",
     "version": "1.6.0",
-    "downloads": 902
+    "downloads": 902,
+    "description": "ASP.NET Core middlewares for the GM.API stack: exception handling (ProblemDetails), request logging with sensitive-data masking, and request localization. Part of the GM.API family.",
+    "tags": [
+     "middleware",
+     "exception-handling",
+     "problem-details",
+     "request-logging",
+     "localization",
+     "aspnetcore"
+    ]
    },
    {
     "id": "GM.API.Versioning",
     "version": "1.6.0",
-    "downloads": 888
+    "downloads": 888,
+    "description": "A one-call API versioning setup (URL-segment versioning + API explorer) for the GM.API stack. Part of the GM.API family.",
+    "tags": [
+     "api-versioning",
+     "aspnetcore",
+     "web-api",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.API.Cors",
     "version": "1.6.0",
-    "downloads": 887
+    "downloads": 887,
+    "description": "A one-call CORS setup for the GM.API stack (AddGMCors / UseGMCors). Part of the GM.API family.",
+    "tags": [
+     "cors",
+     "aspnetcore",
+     "web-api",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Messaging.Domain",
     "version": "1.2.1",
-    "downloads": 785
+    "downloads": 785,
+    "description": "Domain primitives for the GM.Messaging stack: integration events plus inbox and outbox message entities. Part of the GM.Messaging family.",
+    "tags": [
+     "messaging",
+     "integration-events",
+     "inbox",
+     "outbox",
+     "domain",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.HttpClient",
     "version": "1.2.1",
-    "downloads": 747
+    "downloads": 747,
+    "description": "A lightweight, dependency-injection-friendly HttpClient for .NET. Wires up Refit clients with configurable Polly resilience (retry, circuit breaker, timeout, fallback) and delegating handlers for authorization, response caching, structured logging, header injection, and HTTP context propagation \u2014 from a single registration call.",
+    "tags": [
+     "httpclient",
+     "refit",
+     "polly",
+     "resilience",
+     "retry",
+     "circuit-breaker"
+    ]
    },
    {
     "id": "GM.DistributedLock",
     "version": "1.0.2",
-    "downloads": 741
+    "downloads": 741,
+    "description": "A small distributed-lock abstraction for .NET: IDistributedLock with TryAcquire / Acquire (blocking with retry) returning an IAsyncDisposable handle that releases on dispose. Ships a single-process in-memory implementation for dev and tests; add a real backend with GM.DistributedLock.Redis.",
+    "tags": [
+     "distributed-lock",
+     "mutex",
+     "lock",
+     "concurrency",
+     "synchronization",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Caching",
     "version": "1.0.1",
-    "downloads": 731
+    "downloads": 731,
+    "description": "A small caching abstraction for .NET: ICacheService with typed Get/Set/Remove, GetOrCreateAsync (single-flight, no cache stampede), and absolute/sliding expiration \u2014 plus an in-memory implementation over IMemoryCache. Add a distributed backend with GM.Caching.Redis.",
+    "tags": [
+     "caching",
+     "cache",
+     "memory-cache",
+     "get-or-create",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Messaging",
     "version": "1.2.1",
-    "downloads": 689
+    "downloads": 689,
+    "description": "A lightweight messaging setup for .NET built on Wolverine and RabbitMQ. One call (AddGMMessaging) wires up the message bus with config-driven RabbitMQ connection, resilience (retry + circuit breaker) and producer/consumer topology, plus an outbox relay worker. Part of the GM.Messaging family.",
+    "tags": [
+     "messaging",
+     "rabbitmq",
+     "wolverine",
+     "outbox",
+     "inbox",
+     "integration-events"
+    ]
    },
    {
     "id": "GM.Messaging.Persistence",
     "version": "1.2.1",
-    "downloads": 681
+    "downloads": 681,
+    "description": "EF Core persistence for the GM.Messaging outbox/inbox: entity configurations, an inbox store/processor, and DI wiring. Part of the GM.Messaging family.",
+    "tags": [
+     "messaging",
+     "persistence",
+     "entity-framework-core",
+     "outbox",
+     "inbox",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.FileStorage",
     "version": "1.1.1",
-    "downloads": 512
+    "downloads": 512,
+    "description": "A provider-agnostic file/blob storage abstraction for .NET: IFileStorageService with streaming Upload/Download, Exists/Delete, presigned URLs, metadata + checksum validation, and a pluggable key/path strategy \u2014 with config-driven provider selection. Add a backend with GM.FileStorage.Local (and, later, GM.FileStorage.S3 / GM.FileStorage.AzureBlob).",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "s3",
+     "azure-blob",
+     "object-storage",
+     "streaming"
+    ]
    },
    {
     "id": "GM.HealthChecks",
     "version": "1.0.2",
-    "downloads": 452
+    "downloads": 452,
+    "description": "Standardized ASP.NET Core health checks for the GM.* ecosystem: a consistent liveness/readiness/startup tagging convention, JSON responses (status, per-check durations, tags), a generic external-HTTP dependency check, and one call \u2014 AddGMHealthChecks() + MapGMHealthChecks() \u2014 to wire /health/live, /health/ready and /health/startup. Add infra checks with the GM.HealthChecks.* provider packages.",
+    "tags": [
+     "health-checks",
+     "healthcheck",
+     "liveness",
+     "readiness",
+     "aspnetcore",
+     "kubernetes"
+    ]
    },
    {
     "id": "GM.Documents",
     "version": "1.0.1",
-    "downloads": 414
+    "downloads": 414,
+    "description": "Document processing abstractions for the GM.* ecosystem. Provider-agnostic contracts \u2014 IDocumentConverter (transform an existing document: resize/compress/convert) and IDocumentGenerator<T> (produce a document from a plain data model) \u2014 over stream-based DocumentSource / DocumentResult / DocumentMetadata (page count, size, MIME type) that never leak the underlying libraries (OpenXML, ClosedXML, QuestPDF, ImageSharp) to consumers. Designed to sit between raw upload and persistence (validate/normalize/convert, then hand the output stream to GM.FileStorage) without coupling to it. Wire up with AddGMDocuments(); each document type ships in its own package (GM.Documents.Word / .Excel / .Pdf / .Images) so you only pull in what you need.",
+    "tags": [
+     "documents",
+     "document-processing",
+     "converter",
+     "generator",
+     "pdf",
+     "docx"
+    ]
    },
    {
     "id": "GM.RealTime.Domain",
     "version": "1.1.1",
-    "downloads": 413
+    "downloads": 413,
+    "description": "Connection and presence models for GM.RealTime \u2014 Connection, UserPresence, RealTimeMessage \u2014 plus the IConnectionRegistry abstraction for tracking user\u2194connection and group membership. No infrastructure dependencies.",
+    "tags": [
+     "realtime",
+     "signalr",
+     "presence",
+     "connection-registry",
+     "domain",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.RealTime.Persistence",
     "version": "1.1.1",
-    "downloads": 379
+    "downloads": 379,
+    "description": "Cache-backed IConnectionRegistry for GM.RealTime: stores user\u2194connection and group membership in GM.Caching (Redis-ready) and guards the read-modify-write with GM.DistributedLock, so presence is correct and shared across server nodes. Register with AddGMRealTimeCacheStore().",
+    "tags": [
+     "realtime",
+     "signalr",
+     "presence",
+     "connection-registry",
+     "redis",
+     "caching"
+    ]
    },
    {
     "id": "GM.Notifications.Domain",
     "version": "1.0.1",
-    "downloads": 376
+    "downloads": 376,
+    "description": "Notification domain model for GM.Notifications \u2014 the NotificationBase aggregate (status, retry, scheduling) and per-channel entities (email, SMS, WhatsApp, push, Slack) built on EF Core.",
+    "tags": [
+     "notifications",
+     "domain",
+     "entity-framework-core",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Documents.Excel",
     "version": "1.0.1",
-    "downloads": 367
+    "downloads": 367,
+    "description": "Excel (.xlsx) read/write for GM.Documents \u2014 reports and exports across GM.* services. Writes spreadsheets from a library-neutral SpreadsheetDefinition (sheets, typed cells, headers) and reads existing workbooks back into plain rows, behind IDocumentGenerator<SpreadsheetDefinition> and IExcelReader. Built on ClosedXML (MIT), chosen deliberately over EPPlus \u2014 whose v5+ Polyform Noncommercial licence requires a paid commercial licence past a usage tier. ClosedXML types don't leak to consumers. Register with AddGMDocuments().AddExcel().",
+    "tags": [
+     "excel",
+     "xlsx",
+     "spreadsheet",
+     "closedxml",
+     "report",
+     "export"
+    ]
    },
    {
     "id": "GM.FileStorage.Local",
     "version": "1.1.1",
-    "downloads": 367
+    "downloads": 367,
+    "description": "Local disk file-storage provider for GM.FileStorage \u2014 streams files to a root directory with SHA-256 checksum validation and sidecar metadata. Ideal for development and tests. Register with AddGMLocalFileStorage() and select it via FileStorage:Provider = \"Local\".",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "local",
+     "disk",
+     "filesystem",
+     "streaming"
+    ]
    },
    {
     "id": "GM.RealTime",
     "version": "1.1.1",
-    "downloads": 362
+    "downloads": 362,
+    "description": "SignalR-based real-time communication for the GM.* ecosystem. IRealTimeSender pushes to users/connections/groups without touching IHubContext directly; a presence-tracking hub registers connections in a shared, lock-guarded registry (GM.Caching + GM.DistributedLock); and the WebSocket handshake reads the JWT from the access_token query string (pairs with GM.Identity). One call: AddGMRealTime().",
+    "tags": [
+     "realtime",
+     "signalr",
+     "websockets",
+     "presence",
+     "hub",
+     "jwt"
+    ]
    },
    {
     "id": "GM.DistributedLock.Redis",
     "version": "1.0.2",
-    "downloads": 355
+    "downloads": 355,
+    "description": "A Redis-backed IDistributedLock for GM.DistributedLock (StackExchange.Redis): acquire with SET NX PX and release with an owner-checked Lua script, so a lock is only ever released by its owner. Register with AddGMRedisDistributedLock().",
+    "tags": [
+     "distributed-lock",
+     "redis",
+     "mutex",
+     "lock",
+     "concurrency",
+     "stackexchange-redis"
+    ]
    },
    {
     "id": "GM.HealthChecks.EntityFramework",
     "version": "1.0.2",
-    "downloads": 354
+    "downloads": 354,
+    "description": "Database connectivity health check for GM.HealthChecks: verifies a DbContext can reach its database (Database.CanConnectAsync). Works with any EF Core provider, including GM.EntityFramework's GenericDbContext. Register with AddGMDatabaseCheck<TContext>().",
+    "tags": [
+     "health-checks",
+     "healthcheck",
+     "entity-framework-core",
+     "database",
+     "readiness",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.HealthChecks.DistributedLock",
     "version": "1.0.2",
-    "downloads": 350
+    "downloads": 350,
+    "description": "Distributed-lock health check for GM.HealthChecks: acquires and releases a throwaway probe lock through GM.DistributedLock's IDistributedLock, verifying the lock backend (in-memory or Redis) is reachable. Register with AddGMDistributedLockCheck().",
+    "tags": [
+     "health-checks",
+     "healthcheck",
+     "distributed-lock",
+     "redis",
+     "readiness",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Testing",
     "version": "1.0.1",
-    "downloads": 348
+    "downloads": 348,
+    "description": "Shared testing utilities for the GM.* ecosystem \u2014 the dependency-light core. Typed HttpClient/HttpResponseMessage assertion helpers that combine a status-code check and body deserialization in one call (ShouldBeOkAsync<T>, ShouldHaveStatus, ...), for terse, readable API integration tests. No GM runtime dependencies, so it's safe to reference from any test project. The heavier helpers live in sibling packages: GM.Testing.AspNetCore (WebApplicationFactory base), GM.Testing.Fakes (in-memory GM abstraction doubles), GM.Testing.Messaging (published-event capture), GM.Testing.EntityFramework (ephemeral DB fixtures). Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "test-helpers",
+     "http",
+     "assertions",
+     "integration-testing",
+     "xunit"
+    ]
    },
    {
     "id": "GM.HealthChecks.Messaging",
     "version": "1.0.2",
-    "downloads": 344
+    "downloads": 344,
+    "description": "RabbitMQ transport health check for GM.HealthChecks: opens a connection using GM.Messaging's configured MessagingOptions and verifies the broker is reachable. Register with AddGMMessagingCheck().",
+    "tags": [
+     "health-checks",
+     "healthcheck",
+     "rabbitmq",
+     "messaging",
+     "wolverine",
+     "readiness"
+    ]
    },
    {
     "id": "GM.Caching.Redis",
     "version": "1.0.1",
-    "downloads": 330
+    "downloads": 330,
+    "description": "A Redis-backed ICacheService for GM.Caching (StackExchange.Redis): distributed, JSON-serialized caching with GetOrCreateAsync, key prefixing, and absolute/sliding expiration. Register with AddGMRedisCaching().",
+    "tags": [
+     "caching",
+     "cache",
+     "redis",
+     "distributed-cache",
+     "stackexchange-redis",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.HealthChecks.Caching",
     "version": "1.0.2",
-    "downloads": 330
+    "downloads": 330,
+    "description": "Cache health check for GM.HealthChecks: does a Set/Get/Remove round-trip through GM.Caching's ICacheService, so it verifies whichever backend is registered (in-memory or Redis). Register with AddGMCacheCheck().",
+    "tags": [
+     "health-checks",
+     "healthcheck",
+     "cache",
+     "redis",
+     "gm-caching",
+     "readiness"
+    ]
    },
    {
     "id": "GM.Secrets",
     "version": "1.0.1",
-    "downloads": 295
+    "downloads": 295,
+    "description": "A provider-agnostic secrets abstraction for the GM.* ecosystem. ISecretsService (GetSecret / GetRequiredSecret / typed GetSecret<T>) over a pluggable ISecretsProvider, with config-driven provider selection and optional TTL caching via GM.Caching \u2014 so remote lookups (Key Vault, Secrets Manager, Vault) are cheap and rotation happens automatically on cache expiry. Consumers depend only on the interface; the backend is chosen by configuration. Add a provider with GM.Secrets.Environment / GM.Secrets.Configuration.",
+    "tags": [
+     "secrets",
+     "secret-management",
+     "key-vault",
+     "secrets-manager",
+     "vault",
+     "configuration"
+    ]
    },
    {
     "id": "GM.Testing.AspNetCore",
     "version": "1.0.1",
-    "downloads": 294
+    "downloads": 294,
+    "description": "WebApplicationFactory helpers for integration-testing GM.API-based services. GmWebApplicationFactory<TProgram> is a reusable test-host base with a fluent surface for the things every integration test needs: in-memory configuration overrides (.WithConfig), test-specific DI overrides that win over the app's registrations (.WithServices / .ReplaceService \u2014 e.g. swap a real cache for a GM.Testing.Fakes double), and a test environment name. Pulls in GM.Testing for the HTTP assertion helpers. Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "webapplicationfactory",
+     "integration-testing",
+     "aspnetcore",
+     "test-host",
+     "gm-api"
+    ]
    },
    {
     "id": "GM.Idempotency",
     "version": "1.0.1",
-    "downloads": 293
+    "downloads": 293,
+    "description": "Idempotency-key management for the GM.* ecosystem. A provider-agnostic IIdempotencyService (IsProcessed / MarkAsProcessed / TryGetCachedResult, plus a race-safe ExecuteAsync check-and-set) backed by GM.Caching for TTL-based dedup-key storage and guarded by GM.DistributedLock so two near-simultaneous duplicates cannot both pass the \"not yet processed\" gate. Stores enough of the original result to replay it safely. Flexible key strategy (caller-supplied or derived/hashed) and one call \u2014 AddGMIdempotency() \u2014 to wire it up. HTTP middleware and GM.Mediator behavior ship in the GM.Idempotency.Http / .Mediator packages.",
+    "tags": [
+     "idempotency",
+     "idempotent",
+     "deduplication",
+     "exactly-once",
+     "distributed-lock",
+     "caching"
+    ]
    },
    {
     "id": "GM.RateLimiting",
     "version": "1.0.1",
-    "downloads": 291
+    "downloads": 291,
+    "description": "Distributed rate limiting for the GM.* ecosystem. A provider-agnostic IRateLimiterService with policy-based checks (TryAcquireAsync(key, policy)) and three per-policy algorithms \u2014 fixed window, sliding window, and token bucket. Counters live in GM.Caching so limits hold across every service instance (unlike ASP.NET Core's per-process limiter), and the check-and-increment is made atomic by a swappable store (default backed by GM.DistributedLock). Composable key strategies (per-user / per-API-key / per-IP / per-endpoint), policies from appsettings or fluent code, and a 429-friendly result (limit / remaining / retry-after). One call \u2014 AddGMRateLimiting() \u2014 to wire it up.",
+    "tags": [
+     "rate-limiting",
+     "ratelimit",
+     "throttling",
+     "sliding-window",
+     "token-bucket",
+     "fixed-window"
+    ]
    },
    {
     "id": "GM.Documents.Images",
     "version": "1.0.1",
-    "downloads": 288
+    "downloads": 288,
+    "description": "Image processing for GM.Documents: resize, compress, and format-convert (JPEG/PNG/WebP) raster images, plus EXIF/GPS metadata stripping \u2014 the normalize step between a raw photo upload and persistence in GM.FileStorage. Built on SixLabors.ImageSharp for cross-platform decode/encode, but that never leaks: consumers see only the stream-based IImageProcessor and GM.Documents' DocumentSource / DocumentResult. Purpose-built for KYC document and liveness-frame uploads (strip location/camera EXIF by default, cap dimensions and file size). Register with AddGMDocuments().AddImages() or AddGMDocumentImages(). NOTE: ImageSharp is licensed under the Six Labors Split License \u2014 free for open-source and for organisations under its revenue threshold, commercial licence required above it; see the GM.Documents README.",
+    "tags": [
+     "images",
+     "image-processing",
+     "resize",
+     "compress",
+     "exif",
+     "gps"
+    ]
    },
    {
     "id": "GM.OTP.Domain",
     "version": "1.1.1",
-    "downloads": 283
+    "downloads": 283,
+    "description": "Domain model for the GM.OTP stack: the OtpChallenge aggregate plus the code-generation, hashing, and clock abstractions. Part of the GM.OTP family.",
+    "tags": [
+     "otp",
+     "one-time-password",
+     "domain",
+     "security",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Testing.Fakes",
     "version": "1.0.1",
-    "downloads": 280
+    "downloads": 280,
+    "description": "In-memory fakes of the core GM.* infrastructure abstractions, so unit tests run without real infra: FakeCacheService (ICacheService, with inspection), FakeDistributedLock (IDistributedLock, real in-process mutual exclusion so lock-guarded code can be tested, or an always-acquire mode), and FakeFileStorageService (IFileStorageService backed by byte arrays, honouring checksums and not-found semantics). Each exposes assertion-friendly inspection (keys, counts, stored bytes). Register with AddGMTestingFakes() or drop the instance into a GmWebApplicationFactory override. Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "fakes",
+     "test-doubles",
+     "in-memory",
+     "caching",
+     "distributed-lock"
+    ]
    },
    {
     "id": "GM.KYC.Domain",
     "version": "1.0.1",
-    "downloads": 272
+    "downloads": 272,
+    "description": "Domain models for GM.KYC \u2014 the provider-agnostic vocabulary for know-your-customer verification: VerificationSession, KycDocument, LivenessResult, VerificationResult / DocumentCheck, and the VerificationStatus state set (Pending, InReview, Approved, Rejected, RequiresResubmission, Expired) that provider statuses (Identomat) map onto. No infrastructure dependencies \u2014 referenced by the core, provider and persistence packages so they share one model.",
+    "tags": [
+     "kyc",
+     "identity-verification",
+     "domain",
+     "liveness",
+     "verification-status",
+     "gm"
+    ]
    },
    {
     "id": "GM.Notifications.Slack",
     "version": "1.0.1",
-    "downloads": 266
+    "downloads": 266,
+    "description": "Slack notification channel for GM.Notifications \u2014 ISlackSenderService, options, and DI wiring (AddSlackNotificationServices).",
+    "tags": [
+     "notifications",
+     "slack",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Identity.Domain",
     "version": "1.0.1",
-    "downloads": 265
+    "downloads": 265,
+    "description": "Identity domain model \u2014 users, roles, permissions, scopes, clients, sessions, and two-factor auth types \u2014 as EF Core entities for GM-based identity and access systems.",
+    "tags": [
+     "identity",
+     "domain",
+     "rbac",
+     "permissions",
+     "roles",
+     "scopes"
+    ]
    },
    {
     "id": "GM.Notifications.Persistence",
     "version": "1.0.1",
-    "downloads": 264
+    "downloads": 264,
+    "description": "EF Core persistence for GM.Notifications \u2014 entity type configurations mapping the notification entities to a relational (PostgreSQL) schema.",
+    "tags": [
+     "notifications",
+     "persistence",
+     "entity-framework-core",
+     "postgresql",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Identity.Gateway",
     "version": "1.0.1",
-    "downloads": 260
+    "downloads": 260,
+    "description": "Gateway/composition layer for GM.Identity. Placeholder package reserved for the identity gateway abstractions; ships empty for now and fills out in a later release.",
+    "tags": [
+     "identity",
+     "gateway",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Notifications.SMS",
     "version": "1.0.1",
-    "downloads": 257
+    "downloads": 257,
+    "description": "SMS notification channel for GM.Notifications \u2014 ISmsSenderService, options, and DI wiring (AddSmsNotificationServices).",
+    "tags": [
+     "notifications",
+     "sms",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.FeatureManagement",
     "version": "1.0.1",
-    "downloads": 257
+    "downloads": 257,
+    "description": "Feature flags for the GM.* ecosystem. A provider-agnostic IFeatureManager (IsEnabledAsync / GetVariantAsync) with targeting \u2014 percentage rollout, user/tenant overrides, and environment gating \u2014 evaluated against a context you pass in. Flag definitions come from a pluggable IFeatureDefinitionProvider (appsettings by default; swap in a hosted service like LaunchDarkly / Azure App Configuration or a GM.EntityFramework-backed admin UI later without touching consumers). Definitions are cached via GM.Caching with a configurable TTL so changes propagate without a redeploy but don't hit the backing store on every check. Wire it up with AddGMFeatureManagement(). The [FeatureGate] attribute and GM.Mediator gating behavior ship in the GM.FeatureManagement.AspNetCore / .Mediator packages.",
+    "tags": [
+     "feature-flags",
+     "feature-management",
+     "feature-toggle",
+     "ab-testing",
+     "rollout",
+     "targeting"
+    ]
    },
    {
     "id": "GM.Notifications.Push",
     "version": "1.0.1",
-    "downloads": 257
+    "downloads": 257,
+    "description": "Push notification channel for GM.Notifications \u2014 IPushSenderService, options, and DI wiring (AddPushNotificationServices).",
+    "tags": [
+     "notifications",
+     "push",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Notifications.WhatsApp",
     "version": "1.0.1",
-    "downloads": 257
+    "downloads": 257,
+    "description": "WhatsApp notification channel for GM.Notifications \u2014 IWhatsAppSenderService, options, and DI wiring (AddWhatsAppNotificationServices).",
+    "tags": [
+     "notifications",
+     "whatsapp",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Notifications.Email",
     "version": "1.0.1",
-    "downloads": 254
+    "downloads": 254,
+    "description": "Email notification channel for GM.Notifications \u2014 IEmailSenderService, options, and DI wiring (AddEmailNotificationServices).",
+    "tags": [
+     "notifications",
+     "email",
+     "smtp",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.KYC",
     "version": "1.0.1",
-    "downloads": 250
+    "downloads": 250,
+    "description": "Provider-agnostic know-your-customer verification for the GM.* ecosystem. IKycVerificationService (InitiateVerificationAsync / SubmitDocumentAsync / GetVerificationStatusAsync / SubmitLivenessCheckAsync) orchestrates a vendor behind the IKycProvider SPI: document images are normalized and EXIF/GPS-stripped via GM.Documents.Images and persisted via GM.FileStorage before submission, results and attempts flow to an audit sink, and the vendor call is isolated so a second provider is a config change, not a consumer change. Identomat is the provider today (GM.KYC.Identomat). Wire up with AddGMKyc().AddIdentomat().",
+    "tags": [
+     "kyc",
+     "identity-verification",
+     "liveness",
+     "document-verification",
+     "identomat",
+     "gm"
+    ]
    },
    {
     "id": "GM.FileStorage.S3",
     "version": "1.1.1",
-    "downloads": 250
+    "downloads": 250,
+    "description": "AWS S3 (and S3-compatible, e.g. MinIO) provider for GM.FileStorage: streaming Put/Get, presigned read/write URLs, object metadata, and canned-ACL visibility. Register with AddGMS3FileStorage() and select it via FileStorage:Provider = \"S3\".",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "s3",
+     "aws",
+     "minio",
+     "object-storage"
+    ]
    },
    {
     "id": "GM.Secrets.Configuration",
     "version": "1.0.1",
-    "downloads": 247
+    "downloads": 247,
+    "description": "Configuration-backed secrets provider for GM.Secrets \u2014 resolves secrets from IConfiguration (appsettings, user secrets, or any configuration source), optionally under a section. Handy for development and for apps that already surface secrets through configuration. Register with AddGMConfigurationSecrets() and select via Secrets:Provider = \"Configuration\".",
+    "tags": [
+     "secrets",
+     "configuration",
+     "appsettings",
+     "user-secrets",
+     "security",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.RateLimiting.Http",
     "version": "1.0.1",
-    "downloads": 246
+    "downloads": 246,
+    "description": "ASP.NET Core middleware for GM.RateLimiting (GM.API.Middlewares style). Partitions each request by user / API key / IP / endpoint (composable), applies a named policy per endpoint via [RateLimit], and on limit-exceeded returns 429 Too Many Requests with a Retry-After header, X-RateLimit-* headers, and a ProblemDetails body consistent with the GM conventions. Register with AddGMRateLimitingHttp() + UseGMRateLimiting().",
+    "tags": [
+     "rate-limiting",
+     "ratelimit",
+     "throttling",
+     "middleware",
+     "aspnetcore",
+     "429"
+    ]
    },
    {
     "id": "GM.Gateway",
     "version": "1.0.1",
-    "downloads": 245
+    "downloads": 245,
+    "description": "A YARP-based API gateway for the GM.* ecosystem with distributed rate limiting enforced at the edge. AddGMGateway() wires a YARP reverse proxy from configuration and GM.RateLimiting together; each route opts into a named policy via route metadata (RateLimitPolicy / RateLimitPartition), so limits are enforced centrally at the gateway \u2014 across every instance \u2014 before a request is proxied, returning 429 + Retry-After for rejects. Pair with GM.RateLimiting.Redis for the lock-free atomic store.",
+    "tags": [
+     "gateway",
+     "api-gateway",
+     "yarp",
+     "reverse-proxy",
+     "rate-limiting",
+     "throttling"
+    ]
    },
    {
     "id": "GM.RateLimiting.Redis",
     "version": "1.0.1",
-    "downloads": 240
+    "downloads": 240,
+    "description": "Redis-backed, lock-free store for GM.RateLimiting. RedisRateLimitStore runs each algorithm (fixed window, sliding window, token bucket) as a single atomic Lua script server-side \u2014 no distributed lock, one round-trip per check \u2014 so limits are enforced across every instance at high throughput. Register with AddGMRedisRateLimitStore() to replace the default lock-guarded store.",
+    "tags": [
+     "rate-limiting",
+     "ratelimit",
+     "redis",
+     "lua",
+     "atomic",
+     "distributed"
+    ]
    },
    {
     "id": "GM.Identity",
     "version": "1.0.1",
-    "downloads": 239
+    "downloads": 239,
+    "description": "Identity primitives for GM-based ASP.NET Core apps: PBKDF2 password hashing, secure token generation/hashing, and claims extraction (user/session id, username) from the current HttpContext, wired up with a single AddGMIdentity() call.",
+    "tags": [
+     "identity",
+     "authentication",
+     "password-hashing",
+     "pbkdf2",
+     "claims",
+     "tokens"
+    ]
    },
    {
     "id": "GM.OTP.Persistence",
     "version": "1.1.1",
-    "downloads": 239
+    "downloads": 239,
+    "description": "EF Core persistence for the GM.OTP stack: the OtpChallenge entity configuration. Part of the GM.OTP family.",
+    "tags": [
+     "otp",
+     "one-time-password",
+     "persistence",
+     "entity-framework-core",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.OTP",
     "version": "1.1.1",
-    "downloads": 238
+    "downloads": 238,
+    "description": "A lightweight, storage-agnostic one-time password (OTP) core for .NET. OtpManager generates and verifies codes over pluggable code-generation, hashing, and clock abstractions, binding each code to its subject and destination. Part of the GM.OTP family.",
+    "tags": [
+     "otp",
+     "one-time-password",
+     "2fa",
+     "mfa",
+     "verification",
+     "security"
+    ]
    },
    {
     "id": "GM.FileStorage.AzureBlob",
     "version": "1.1.1",
-    "downloads": 238
+    "downloads": 238,
+    "description": "Azure Blob Storage provider for GM.FileStorage: streaming block-blob upload/download, SAS URLs, and blob metadata. Register with AddGMAzureBlobFileStorage() and select it via FileStorage:Provider = \"AzureBlob\".",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "azure",
+     "azure-blob",
+     "object-storage",
+     "streaming"
+    ]
    },
    {
     "id": "GM.Identity.Persistence",
     "version": "1.0.1",
-    "downloads": 235
+    "downloads": 235,
+    "description": "EF Core persistence for GM.Identity \u2014 entity type configurations mapping the identity domain (users, roles, permissions, scopes, clients, sessions) to a PostgreSQL schema.",
+    "tags": [
+     "identity",
+     "persistence",
+     "entity-framework-core",
+     "postgresql",
+     "npgsql",
+     "rbac"
+    ]
    },
    {
     "id": "GM.Secrets.Environment",
     "version": "1.0.1",
-    "downloads": 233
+    "downloads": 233,
+    "description": "Environment-variable secrets provider for GM.Secrets \u2014 resolves secrets from environment variables with a configurable prefix and name transform (e.g. \"Db:Password\" \u2192 \"DB_PASSWORD\"). Zero dependencies; ideal for containers and 12-factor apps. Register with AddGMEnvironmentSecrets() and select via Secrets:Provider = \"Environment\".",
+    "tags": [
+     "secrets",
+     "environment-variables",
+     "12-factor",
+     "configuration",
+     "security",
+     "dotnet"
+    ]
    },
    {
     "id": "GM.Notifications",
     "version": "1.0.1",
-    "downloads": 233
+    "downloads": 233,
+    "description": "Multi-channel notifications for .NET: a single AddGMNotifications() call wiring Email, SMS, WhatsApp, Push, and Slack senders over a persisted, retrying notification model. This meta-package bundles the GM.Notifications.* packages.",
+    "tags": [
+     "notifications",
+     "email",
+     "sms",
+     "whatsapp",
+     "push",
+     "slack"
+    ]
    },
    {
     "id": "GM.KYC.Persistence",
     "version": "1.0.1",
-    "downloads": 231
+    "downloads": 231,
+    "description": "Audit-grade EF Core storage for GM.KYC \u2014 the IKycAuditStore implementation backing verification attempts, submitted-document references, results, and raw vendor responses. KycDbContext derives from GM.EntityFramework.Persistence's GenericDbContext (audit conventions). The store is a thin seam intended to forward to GM.Audit once it exists, rather than owning a second parallel audit trail. Register with AddGMKyc().AddIdentomat().AddKycPersistence(...).",
+    "tags": [
+     "kyc",
+     "audit",
+     "persistence",
+     "entity-framework",
+     "efcore",
+     "gm-entityframework"
+    ]
    },
    {
     "id": "GM.Idempotency.Http",
     "version": "1.0.1",
-    "downloads": 226
+    "downloads": 226,
+    "description": "HTTP integration for GM.Idempotency: an ASP.NET Core middleware that reads a client-supplied Idempotency-Key header, short-circuits duplicate unsafe (POST/PUT/PATCH) requests via GM.Idempotency's distributed-lock-guarded check-and-set, and replays the stored response (status, allow-listed headers, body) so a retry gets the exact same result. Opt in globally or per-endpoint with [Idempotent]. Register with AddGMIdempotencyHttp() + UseGMIdempotency().",
+    "tags": [
+     "idempotency",
+     "idempotent",
+     "http",
+     "middleware",
+     "aspnetcore",
+     "replay"
+    ]
    },
    {
     "id": "GM.Documents.Word",
     "version": "1.0.1",
-    "downloads": 222
+    "downloads": 222,
+    "description": "Word (.docx) generation and text extraction for GM.Documents. Generates documents (contracts, KYC verification letters, formatted correspondence) from GM.Documents' library-neutral DocumentContent block model via the Open XML SDK, and extracts text from existing .docx files \u2014 behind IDocumentGenerator<WordDocumentDefinition> and IDocumentTextExtractor. Open XML types never leak to consumers. Register with AddGMDocuments().AddWord(). Open XML SDK is MIT-licensed.",
+    "tags": [
+     "word",
+     "docx",
+     "openxml",
+     "document-generation",
+     "contract",
+     "kyc"
+    ]
    },
    {
     "id": "GM.Idempotency.Mediator",
     "version": "1.0.1",
-    "downloads": 221
+    "downloads": 221,
+    "description": "GM.Mediator integration for GM.Idempotency: IdempotencyBehavior<TRequest, TResponse>, a pipeline behavior that dedups a request/command before the handler runs \u2014 keyed by an explicit id (IIdempotentRequest, e.g. a RabbitMQ message id) or a hash of the payload ([Idempotent]) \u2014 via the distributed-lock-guarded check-and-set, and replays the stored response on redelivery. For exactly-once handling of at-least-once message delivery (GM.Messaging). Register with AddGMIdempotencyBehavior().",
+    "tags": [
+     "idempotency",
+     "idempotent",
+     "mediator",
+     "gm-mediator",
+     "pipeline-behavior",
+     "messaging"
+    ]
    },
    {
     "id": "GM.Testing.EntityFramework",
     "version": "1.0.1",
-    "downloads": 220
+    "downloads": 220,
+    "description": "Ephemeral database test fixtures for EF Core / GM.EntityFramework.Persistence contexts. PostgresDatabaseFixture<TContext> spins up a throwaway PostgreSQL via Testcontainers, applies migrations, and tears the container down on dispose \u2014 real relational behaviour in integration tests. InMemoryDatabaseFixture<TContext> is the Docker-free fallback (EF in-memory provider) for fast unit tests. Both are generic over any DbContext (including GenericDbContext-derived), so they pair with GM.EntityFramework.Persistence without coupling to a version. This is the heavy package (Testcontainers + EF) deliberately kept separate so unit-test projects don't inherit Docker/EF. Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "entity-framework",
+     "efcore",
+     "testcontainers",
+     "postgres",
+     "database-fixture"
+    ]
    },
    {
     "id": "GM.Documents.Pdf",
     "version": "1.0.1",
-    "downloads": 219
+    "downloads": 219,
+    "description": "PDF generation and text extraction for GM.Documents. Generates PDFs (invoices, KYC reports, subscription receipts) from GM.Documents' library-neutral DocumentContent block model via QuestPDF, and extracts text/data from existing PDFs via PdfPig \u2014 two deliberately separate concerns behind IDocumentGenerator<PdfDocumentDefinition> and IDocumentTextExtractor. Neither QuestPDF nor PdfPig types leak to consumers. Register with AddGMDocuments().AddPdf(). NOTE: QuestPDF is under the QuestPDF Community MIT License \u2014 free for open-source and for companies under $1M USD annual revenue; a paid licence applies above it. See the GM.Documents README.",
+    "tags": [
+     "pdf",
+     "pdf-generation",
+     "pdf-extraction",
+     "questpdf",
+     "pdfpig",
+     "invoice"
+    ]
    },
    {
     "id": "GM.FeatureManagement.AspNetCore",
     "version": "1.0.1",
-    "downloads": 219
+    "downloads": 219,
+    "description": "ASP.NET Core integration for GM.FeatureManagement: gate MVC controllers/actions and minimal-API endpoints behind feature flags. Annotate with [FeatureGate(\"Key\")] or chain .RequireFeature(\"Key\") on an endpoint; when the flag is off for the current request the endpoint returns a configurable status (404 by default), so an unreleased feature simply looks absent. The request's FeatureContext is built automatically from the user/tenant claims. Register with AddGMFeatureManagementAspNetCore().",
+    "tags": [
+     "feature-flags",
+     "feature-management",
+     "aspnetcore",
+     "featuregate",
+     "minimal-api",
+     "mvc"
+    ]
    },
    {
     "id": "GM.FeatureManagement.Mediator",
     "version": "1.0.1",
-    "downloads": 218
+    "downloads": 218,
+    "description": "GM.Mediator integration for GM.FeatureManagement: a pipeline behavior that gates command/query handlers behind a feature flag. Mark a request with IFeatureGatedRequest or [FeatureGate(\"Key\")] and the handler runs only when the flag is enabled for the ambient FeatureContext; otherwise a FeatureDisabledException short-circuits the pipeline before the handler. Register with AddGMFeatureGateBehavior().",
+    "tags": [
+     "feature-flags",
+     "feature-management",
+     "mediator",
+     "gm-mediator",
+     "pipeline-behavior",
+     "cqrs"
+    ]
    },
    {
     "id": "GM.KYC.Identomat",
     "version": "1.0.1",
-    "downloads": 217
+    "downloads": 217,
+    "description": "Identomat provider for GM.KYC. Implements the IKycProvider SPI against Identomat's external API (POST /begin to start a hosted-widget session, /upload-file to attach normalized documents, /result to read the decision) and maps Identomat's approved/rejected/live/similarity vocabulary onto the GM.KYC.Domain status set. The API key (companyKey) is pulled from GM.Secrets \u2014 never hardcoded. Inbound webhook callbacks are signature-verified and deduped via GM.Idempotency (at-least-once delivery). Register with AddGMKyc().AddIdentomat().",
+    "tags": [
+     "kyc",
+     "identomat",
+     "identity-verification",
+     "liveness",
+     "webhook",
+     "idempotency"
+    ]
    },
    {
     "id": "GM.Testing.Messaging",
     "version": "1.0.1",
-    "downloads": 214
+    "downloads": 214,
+    "description": "Published-event capture for testing GM.Messaging consumers \u2014 assert \"this integration event was published\" without a real RabbitMQ broker. CapturingMessageBus stands in for Wolverine's IMessageBus and records every published/sent/scheduled message; PublishedMessages / Published<TEvent>() / ShouldHavePublished<TEvent>() make the assertions terse. Register with AddCapturingMessageBus() in a GmWebApplicationFactory override, or use the recorder directly in a unit test. Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "messaging",
+     "wolverine",
+     "integration-events",
+     "outbox",
+     "test-double"
+    ]
    },
    {
     "id": "GM.Testing.Mediator",
     "version": "1.0.1",
-    "downloads": 212
+    "downloads": 212,
+    "description": "GM.Mediator test helpers. Invoke a command/query handler directly in a unit test, bypassing the whole pipeline (InvokeHandlerAsync), or run through the real mediator with pipeline behaviors selectively removed (RemovePipelineBehaviors / RemovePipelineBehavior(typeof(SomeBehavior<,>))) \u2014 so unit tests skip idempotency/validation/logging behaviors while integration tests keep them. Test-only (DevelopmentDependency).",
+    "tags": [
+     "testing",
+     "mediator",
+     "gm-mediator",
+     "cqrs",
+     "pipeline-behavior",
+     "handlers"
+    ]
    },
    {
     "id": "GM.Scheduling",
     "version": "1.0.0",
-    "downloads": 122
+    "downloads": 122,
+    "description": "Job scheduling for the GM.* ecosystem, wrapping Quartz.NET behind a clean provider abstraction. Implement IScheduledJob and schedule it with IJobScheduler (ScheduleAsync / ScheduleRecurringAsync with cron / Pause / Resume / TriggerNow) \u2014 no Quartz types (ITrigger, IJobDetail) leak to your code. Recurring jobs are guarded by GM.DistributedLock so a cron fires once across every scaled-out instance, each execution runs in its own DI scope (scoped DbContext / GM.Mediator work correctly), per-job retry policies handle transient failures, and execution history exposes last-run status. One call \u2014 AddGMScheduling() \u2014 with fluent or attribute-based job registration.",
+    "tags": [
+     "scheduling",
+     "jobs",
+     "quartz",
+     "cron",
+     "background-jobs",
+     "recurring"
+    ]
    },
    {
     "id": "GM.Scheduling.EntityFramework",
     "version": "1.0.0",
-    "downloads": 106
+    "downloads": 106,
+    "description": "EF Core + Quartz ADO.NET persistence for GM.Scheduling. UseQuartzAdoStore() switches Quartz to a persistent job store so schedules and triggers survive restarts and coordinate across instances; UseEntityFrameworkHistory() records job execution history / last-run status to a DbContext so observability data outlives the process. Configured on the same AddGMScheduling builder \u2014 no Quartz types leak to your app.",
+    "tags": [
+     "scheduling",
+     "jobs",
+     "quartz",
+     "ado-jobstore",
+     "entity-framework",
+     "efcore"
+    ]
    }
   ]
  },
  "github": {
   "public_repos": 26,
   "followers": 0,
-  "contributions_last_year": 378,
-  "calendar": [
-   [
-    "2025-10-05",
-    0
-   ],
-   [
-    "2025-10-06",
-    0
-   ],
-   [
-    "2025-10-07",
-    0
-   ],
-   [
-    "2025-10-08",
-    0
-   ],
-   [
-    "2025-10-09",
-    0
-   ],
-   [
-    "2025-10-10",
-    0
-   ],
-   [
-    "2025-10-11",
-    0
-   ],
-   [
-    "2025-10-12",
-    0
-   ],
-   [
-    "2025-10-13",
-    0
-   ],
-   [
-    "2025-10-14",
-    0
-   ],
-   [
-    "2025-10-15",
-    0
-   ],
-   [
-    "2025-10-16",
-    0
-   ],
-   [
-    "2025-10-17",
-    0
-   ],
-   [
-    "2025-10-18",
-    0
-   ],
-   [
-    "2025-10-19",
-    0
-   ],
-   [
-    "2025-10-20",
-    0
-   ],
-   [
-    "2025-10-21",
-    0
-   ],
-   [
-    "2025-10-22",
-    0
-   ],
-   [
-    "2025-10-23",
-    0
-   ],
-   [
-    "2025-10-24",
-    0
-   ],
-   [
-    "2025-10-25",
-    0
-   ],
-   [
-    "2025-10-26",
-    0
-   ],
-   [
-    "2025-10-27",
-    0
-   ],
-   [
-    "2025-10-28",
-    0
-   ],
-   [
-    "2025-10-29",
-    0
-   ],
-   [
-    "2025-10-30",
-    0
-   ],
-   [
-    "2025-10-31",
-    0
-   ],
-   [
-    "2025-11-01",
-    0
-   ],
-   [
-    "2025-11-02",
-    0
-   ],
-   [
-    "2025-11-03",
-    0
-   ],
-   [
-    "2025-11-04",
-    0
-   ],
-   [
-    "2025-11-05",
-    0
-   ],
-   [
-    "2025-11-06",
-    0
-   ],
-   [
-    "2025-11-07",
-    0
-   ],
-   [
-    "2025-11-08",
-    0
-   ],
-   [
-    "2025-11-09",
-    0
-   ],
-   [
-    "2025-11-10",
-    0
-   ],
-   [
-    "2025-11-11",
-    0
-   ],
-   [
-    "2025-11-12",
-    0
-   ],
-   [
-    "2025-11-13",
-    0
-   ],
-   [
-    "2025-11-14",
-    0
-   ],
-   [
-    "2025-11-15",
-    0
-   ],
-   [
-    "2025-11-16",
-    0
-   ],
-   [
-    "2025-11-17",
-    0
-   ],
-   [
-    "2025-11-18",
-    0
-   ],
-   [
-    "2025-11-19",
-    0
-   ],
-   [
-    "2025-11-20",
-    0
-   ],
-   [
-    "2025-11-21",
-    0
-   ],
-   [
-    "2025-11-22",
-    0
-   ],
-   [
-    "2025-11-23",
-    0
-   ],
-   [
-    "2025-11-24",
-    0
-   ],
-   [
-    "2025-11-25",
-    0
-   ],
-   [
-    "2025-11-26",
-    0
-   ],
-   [
-    "2025-11-27",
-    0
-   ],
-   [
-    "2025-11-28",
-    0
-   ],
-   [
-    "2025-11-29",
-    0
-   ],
-   [
-    "2025-11-30",
-    0
-   ],
-   [
-    "2025-12-01",
-    0
-   ],
-   [
-    "2025-12-02",
-    0
-   ],
-   [
-    "2025-12-03",
-    0
-   ],
-   [
-    "2025-12-04",
-    0
-   ],
-   [
-    "2025-12-05",
-    0
-   ],
-   [
-    "2025-12-06",
-    0
-   ],
-   [
-    "2025-12-07",
-    0
-   ],
-   [
-    "2025-12-08",
-    0
-   ],
-   [
-    "2025-12-09",
-    0
-   ],
-   [
-    "2025-12-10",
-    0
-   ],
-   [
-    "2025-12-11",
-    0
-   ],
-   [
-    "2025-12-12",
-    0
-   ],
-   [
-    "2025-12-13",
-    0
-   ],
-   [
-    "2025-12-14",
-    0
-   ],
-   [
-    "2025-12-15",
-    0
-   ],
-   [
-    "2025-12-16",
-    0
-   ],
-   [
-    "2025-12-17",
-    0
-   ],
-   [
-    "2025-12-18",
-    0
-   ],
-   [
-    "2025-12-19",
-    0
-   ],
-   [
-    "2025-12-20",
-    0
-   ],
-   [
-    "2025-12-21",
-    0
-   ],
-   [
-    "2025-12-22",
-    0
-   ],
-   [
-    "2025-12-23",
-    0
-   ],
-   [
-    "2025-12-24",
-    0
-   ],
-   [
-    "2025-12-25",
-    0
-   ],
-   [
-    "2025-12-26",
-    0
-   ],
-   [
-    "2025-12-27",
-    0
-   ],
-   [
-    "2025-12-28",
-    0
-   ],
-   [
-    "2025-12-29",
-    0
-   ],
-   [
-    "2025-12-30",
-    0
-   ],
-   [
-    "2025-12-31",
-    0
-   ],
-   [
-    "2026-01-01",
-    0
-   ],
-   [
-    "2026-01-02",
-    0
-   ],
-   [
-    "2026-01-03",
-    0
-   ],
-   [
-    "2026-01-04",
-    0
-   ],
-   [
-    "2026-01-05",
-    0
-   ],
-   [
-    "2026-01-06",
-    0
-   ],
-   [
-    "2026-01-07",
-    0
-   ],
-   [
-    "2026-01-08",
-    0
-   ],
-   [
-    "2026-01-09",
-    0
-   ],
-   [
-    "2026-01-10",
-    0
-   ],
-   [
-    "2026-01-11",
-    0
-   ],
-   [
-    "2026-01-12",
-    3
-   ],
-   [
-    "2026-01-13",
-    0
-   ],
-   [
-    "2026-01-14",
-    0
-   ],
-   [
-    "2026-01-15",
-    0
-   ],
-   [
-    "2026-01-16",
-    0
-   ],
-   [
-    "2026-01-17",
-    0
-   ],
-   [
-    "2026-01-18",
-    0
-   ],
-   [
-    "2026-01-19",
-    0
-   ],
-   [
-    "2026-01-20",
-    0
-   ],
-   [
-    "2026-01-21",
-    0
-   ],
-   [
-    "2026-01-22",
-    0
-   ],
-   [
-    "2026-01-23",
-    0
-   ],
-   [
-    "2026-01-24",
-    0
-   ],
-   [
-    "2026-01-25",
-    0
-   ],
-   [
-    "2026-01-26",
-    0
-   ],
-   [
-    "2026-01-27",
-    0
-   ],
-   [
-    "2026-01-28",
-    0
-   ],
-   [
-    "2026-01-29",
-    0
-   ],
-   [
-    "2026-01-30",
-    0
-   ],
-   [
-    "2026-01-31",
-    0
-   ],
-   [
-    "2026-02-01",
-    0
-   ],
-   [
-    "2026-02-02",
-    0
-   ],
-   [
-    "2026-02-03",
-    0
-   ],
-   [
-    "2026-02-04",
-    0
-   ],
-   [
-    "2026-02-05",
-    0
-   ],
-   [
-    "2026-02-06",
-    0
-   ],
-   [
-    "2026-02-07",
-    0
-   ],
-   [
-    "2026-02-08",
-    0
-   ],
-   [
-    "2026-02-09",
-    0
-   ],
-   [
-    "2026-02-10",
-    0
-   ],
-   [
-    "2026-02-11",
-    0
-   ],
-   [
-    "2026-02-12",
-    0
-   ],
-   [
-    "2026-02-13",
-    0
-   ],
-   [
-    "2026-02-14",
-    0
-   ],
-   [
-    "2026-02-15",
-    0
-   ],
-   [
-    "2026-02-16",
-    0
-   ],
-   [
-    "2026-02-17",
-    0
-   ],
-   [
-    "2026-02-18",
-    0
-   ],
-   [
-    "2026-02-19",
-    0
-   ],
-   [
-    "2026-02-20",
-    0
-   ],
-   [
-    "2026-02-21",
-    0
-   ],
-   [
-    "2026-02-22",
-    0
-   ],
-   [
-    "2026-02-23",
-    0
-   ],
-   [
-    "2026-02-24",
-    0
-   ],
-   [
-    "2026-02-25",
-    0
-   ],
-   [
-    "2026-02-26",
-    0
-   ],
-   [
-    "2026-02-27",
-    0
-   ],
-   [
-    "2026-02-28",
-    0
-   ],
-   [
-    "2026-03-01",
-    0
-   ],
-   [
-    "2026-03-02",
-    0
-   ],
-   [
-    "2026-03-03",
-    0
-   ],
-   [
-    "2026-03-04",
-    0
-   ],
-   [
-    "2026-03-05",
-    0
-   ],
-   [
-    "2026-03-06",
-    0
-   ],
-   [
-    "2026-03-07",
-    0
-   ],
-   [
-    "2026-03-08",
-    0
-   ],
-   [
-    "2026-03-09",
-    0
-   ],
-   [
-    "2026-03-10",
-    0
-   ],
-   [
-    "2026-03-11",
-    0
-   ],
-   [
-    "2026-03-12",
-    0
-   ],
-   [
-    "2026-03-13",
-    0
-   ],
-   [
-    "2026-03-14",
-    0
-   ],
-   [
-    "2026-03-15",
-    0
-   ],
-   [
-    "2026-03-16",
-    0
-   ],
-   [
-    "2026-03-17",
-    0
-   ],
-   [
-    "2026-03-18",
-    0
-   ],
-   [
-    "2026-03-19",
-    0
-   ],
-   [
-    "2026-03-20",
-    0
-   ],
-   [
-    "2026-03-21",
-    0
-   ],
-   [
-    "2026-03-22",
-    0
-   ],
-   [
-    "2026-03-23",
-    0
-   ],
-   [
-    "2026-03-24",
-    0
-   ],
-   [
-    "2026-03-25",
-    0
-   ],
-   [
-    "2026-03-26",
-    0
-   ],
-   [
-    "2026-03-27",
-    0
-   ],
-   [
-    "2026-03-28",
-    0
-   ],
-   [
-    "2026-03-29",
-    0
-   ],
-   [
-    "2026-03-30",
-    0
-   ],
-   [
-    "2026-03-31",
-    0
-   ],
-   [
-    "2026-04-01",
-    0
-   ],
-   [
-    "2026-04-02",
-    0
-   ],
-   [
-    "2026-04-03",
-    0
-   ],
-   [
-    "2026-04-04",
-    0
-   ],
-   [
-    "2026-04-05",
-    0
-   ],
-   [
-    "2026-04-06",
-    0
-   ],
-   [
-    "2026-04-07",
-    0
-   ],
-   [
-    "2026-04-08",
-    0
-   ],
-   [
-    "2026-04-09",
-    0
-   ],
-   [
-    "2026-04-10",
-    0
-   ],
-   [
-    "2026-04-11",
-    0
-   ],
-   [
-    "2026-04-12",
-    0
-   ],
-   [
-    "2026-04-13",
-    0
-   ],
-   [
-    "2026-04-14",
-    0
-   ],
-   [
-    "2026-04-15",
-    0
-   ],
-   [
-    "2026-04-16",
-    0
-   ],
-   [
-    "2026-04-17",
-    0
-   ],
-   [
-    "2026-04-18",
-    0
-   ],
-   [
-    "2026-04-19",
-    0
-   ],
-   [
-    "2026-04-20",
-    0
-   ],
-   [
-    "2026-04-21",
-    0
-   ],
-   [
-    "2026-04-22",
-    0
-   ],
-   [
-    "2026-04-23",
-    0
-   ],
-   [
-    "2026-04-24",
-    0
-   ],
-   [
-    "2026-04-25",
-    0
-   ],
-   [
-    "2026-04-26",
-    0
-   ],
-   [
-    "2026-04-27",
-    0
-   ],
-   [
-    "2026-04-28",
-    0
-   ],
-   [
-    "2026-04-29",
-    0
-   ],
-   [
-    "2026-04-30",
-    0
-   ],
-   [
-    "2026-05-01",
-    0
-   ],
-   [
-    "2026-05-02",
-    0
-   ],
-   [
-    "2026-05-03",
-    0
-   ],
-   [
-    "2026-05-04",
-    0
-   ],
-   [
-    "2026-05-05",
-    0
-   ],
-   [
-    "2026-05-06",
-    0
-   ],
-   [
-    "2026-05-07",
-    0
-   ],
-   [
-    "2026-05-08",
-    0
-   ],
-   [
-    "2026-05-09",
-    0
-   ],
-   [
-    "2026-05-10",
-    0
-   ],
-   [
-    "2026-05-11",
-    0
-   ],
-   [
-    "2026-05-12",
-    0
-   ],
-   [
-    "2026-05-13",
-    0
-   ],
-   [
-    "2026-05-14",
-    0
-   ],
-   [
-    "2026-05-15",
-    0
-   ],
-   [
-    "2026-05-16",
-    0
-   ],
-   [
-    "2026-05-17",
-    0
-   ],
-   [
-    "2026-05-18",
-    0
-   ],
-   [
-    "2026-05-19",
-    0
-   ],
-   [
-    "2026-05-20",
-    0
-   ],
-   [
-    "2026-05-21",
-    0
-   ],
-   [
-    "2026-05-22",
-    0
-   ],
-   [
-    "2026-05-23",
-    0
-   ],
-   [
-    "2026-05-24",
-    0
-   ],
-   [
-    "2026-05-25",
-    0
-   ],
-   [
-    "2026-05-26",
-    0
-   ],
-   [
-    "2026-05-27",
-    0
-   ],
-   [
-    "2026-05-28",
-    0
-   ],
-   [
-    "2026-05-29",
-    0
-   ],
-   [
-    "2026-05-30",
-    0
-   ],
-   [
-    "2026-05-31",
-    0
-   ],
-   [
-    "2026-06-01",
-    0
-   ],
-   [
-    "2026-06-02",
-    0
-   ],
-   [
-    "2026-06-03",
-    0
-   ],
-   [
-    "2026-06-04",
-    0
-   ],
-   [
-    "2026-06-05",
-    0
-   ],
-   [
-    "2026-06-06",
-    0
-   ],
-   [
-    "2026-06-07",
-    0
-   ],
-   [
-    "2026-06-08",
-    0
-   ],
-   [
-    "2026-06-09",
-    0
-   ],
-   [
-    "2026-06-10",
-    0
-   ],
-   [
-    "2026-06-11",
-    0
-   ],
-   [
-    "2026-06-12",
-    0
-   ],
-   [
-    "2026-06-13",
-    0
-   ],
-   [
-    "2026-06-14",
-    0
-   ],
-   [
-    "2026-06-15",
-    0
-   ],
-   [
-    "2026-06-16",
-    0
-   ],
-   [
-    "2026-06-17",
-    0
-   ],
-   [
-    "2026-06-18",
-    0
-   ],
-   [
-    "2026-06-19",
-    0
-   ],
-   [
-    "2026-06-20",
-    0
-   ],
-   [
-    "2026-06-21",
-    0
-   ],
-   [
-    "2026-06-22",
-    0
-   ],
-   [
-    "2026-06-23",
-    0
-   ],
-   [
-    "2026-06-24",
-    0
-   ],
-   [
-    "2026-06-25",
-    0
-   ],
-   [
-    "2026-06-26",
-    0
-   ],
-   [
-    "2026-06-27",
-    0
-   ],
-   [
-    "2026-06-28",
-    0
-   ],
-   [
-    "2026-06-29",
-    0
-   ],
-   [
-    "2026-06-30",
-    0
-   ],
-   [
-    "2026-07-01",
-    0
-   ],
-   [
-    "2026-07-02",
-    0
-   ],
-   [
-    "2026-07-03",
-    0
-   ],
-   [
-    "2026-07-04",
-    0
-   ],
-   [
-    "2026-07-05",
-    0
-   ],
-   [
-    "2026-07-06",
-    0
-   ],
-   [
-    "2026-07-07",
-    0
-   ],
-   [
-    "2026-07-08",
-    0
-   ],
-   [
-    "2026-07-09",
-    0
-   ],
-   [
-    "2026-07-10",
-    2
-   ],
-   [
-    "2026-07-11",
-    0
-   ],
-   [
-    "2026-07-12",
-    0
-   ],
-   [
-    "2026-07-13",
-    0
-   ],
-   [
-    "2026-07-14",
-    0
-   ],
-   [
-    "2026-07-15",
-    0
-   ],
-   [
-    "2026-07-16",
-    0
-   ],
-   [
-    "2026-07-17",
-    0
-   ],
-   [
-    "2026-07-18",
-    0
-   ],
-   [
-    "2026-07-19",
-    0
-   ],
-   [
-    "2026-07-20",
-    0
-   ],
-   [
-    "2026-07-21",
-    0
-   ],
-   [
-    "2026-07-22",
-    0
-   ],
-   [
-    "2026-07-23",
-    0
-   ],
-   [
-    "2026-07-24",
-    0
-   ],
-   [
-    "2026-07-25",
-    0
-   ],
-   [
-    "2026-07-26",
-    0
-   ],
-   [
-    "2026-07-27",
-    16
-   ],
-   [
-    "2026-07-28",
-    6
-   ],
-   [
-    "2026-07-29",
-    5
-   ],
-   [
-    "2026-07-30",
-    13
-   ],
-   [
-    "2026-07-31",
-    11
-   ],
-   [
-    "2026-08-01",
-    17
-   ],
-   [
-    "2026-08-02",
-    28
-   ],
-   [
-    "2026-08-03",
-    4
-   ],
-   [
-    "2026-08-04",
-    0
-   ],
-   [
-    "2026-08-05",
-    8
-   ],
-   [
-    "2026-08-06",
-    2
-   ],
-   [
-    "2026-08-07",
-    18
-   ],
-   [
-    "2026-08-08",
-    0
-   ],
-   [
-    "2026-08-09",
-    0
-   ],
-   [
-    "2026-08-10",
-    4
-   ],
-   [
-    "2026-08-11",
-    1
-   ],
-   [
-    "2026-08-12",
-    0
-   ],
-   [
-    "2026-08-13",
-    0
-   ],
-   [
-    "2026-08-14",
-    0
-   ],
-   [
-    "2026-08-15",
-    0
-   ],
-   [
-    "2026-08-16",
-    0
-   ],
-   [
-    "2026-08-17",
-    0
-   ],
-   [
-    "2026-08-18",
-    0
-   ],
-   [
-    "2026-08-19",
-    0
-   ],
-   [
-    "2026-08-20",
-    0
-   ],
-   [
-    "2026-08-21",
-    0
-   ],
-   [
-    "2026-08-22",
-    0
-   ],
-   [
-    "2026-08-23",
-    0
-   ],
-   [
-    "2026-08-24",
-    0
-   ],
-   [
-    "2026-08-25",
-    0
-   ],
-   [
-    "2026-08-26",
-    0
-   ],
-   [
-    "2026-08-27",
-    0
-   ],
-   [
-    "2026-08-28",
-    0
-   ],
-   [
-    "2026-08-29",
-    3
-   ],
-   [
-    "2026-08-30",
-    3
-   ],
-   [
-    "2026-08-31",
-    181
-   ],
-   [
-    "2026-09-01",
-    44
-   ],
-   [
-    "2026-09-02",
-    0
-   ],
-   [
-    "2026-09-03",
-    2
-   ],
-   [
-    "2026-09-04",
-    0
-   ],
-   [
-    "2026-09-05",
-    0
-   ],
-   [
-    "2026-09-06",
-    0
-   ],
-   [
-    "2026-09-07",
-    0
-   ],
-   [
-    "2026-09-08",
-    3
-   ],
-   [
-    "2026-09-09",
-    0
-   ],
-   [
-    "2026-09-10",
-    0
-   ],
-   [
-    "2026-09-11",
-    0
-   ],
-   [
-    "2026-09-12",
-    0
-   ],
-   [
-    "2026-09-13",
-    0
-   ],
-   [
-    "2026-09-14",
-    0
-   ],
-   [
-    "2026-09-15",
-    0
-   ],
-   [
-    "2026-09-16",
-    0
-   ],
-   [
-    "2026-09-17",
-    0
-   ],
-   [
-    "2026-09-18",
-    0
-   ],
-   [
-    "2026-09-19",
-    0
-   ],
-   [
-    "2026-09-20",
-    0
-   ],
-   [
-    "2026-09-21",
-    0
-   ],
-   [
-    "2026-09-22",
-    0
-   ],
-   [
-    "2026-09-23",
-    0
-   ],
-   [
-    "2026-09-24",
-    0
-   ],
-   [
-    "2026-09-25",
-    0
-   ],
-   [
-    "2026-09-26",
-    0
-   ],
-   [
-    "2026-09-27",
-    0
-   ],
-   [
-    "2026-09-28",
-    0
-   ],
-   [
-    "2026-09-29",
-    0
-   ],
-   [
-    "2026-09-30",
-    0
-   ],
-   [
-    "2026-10-01",
-    0
-   ],
-   [
-    "2026-10-02",
-    0
-   ],
-   [
-    "2026-10-03",
-    0
-   ],
-   [
-    "2026-10-04",
-    0
-   ],
-   [
-    "2026-10-05",
-    4
-   ]
+  "contributions_last_year": 379,
+  "repos": [
+   {
+    "name": "GM.API.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.API.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:01Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Caching.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Caching.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:06Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.DistributedLock.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.DistributedLock.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:11Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Documentation.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Documentation.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:16Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Documents.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Documents.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T08:21:44Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.EntityFramework.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.EntityFramework.Samples",
+    "stars": 1,
+    "pushed_at": "2026-09-01T05:58:26Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Exceptions.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Exceptions.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:31Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.FeatureManagement.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.FeatureManagement.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T08:21:35Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.FileStorage.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.FileStorage.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:42Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Gateway.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Gateway.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:47Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.HealthChecks.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.HealthChecks.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:53Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.HttpClient.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.HttpClient.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:58:58Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Idempotency.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Idempotency.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T08:21:30Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Identity.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Identity.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-24T21:36:23Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.KYC.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.KYC.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T08:21:36Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Mapper.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Mapper.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:20Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Mediator.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Mediator.Samples",
+    "stars": 1,
+    "pushed_at": "2026-08-30T20:50:48Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Messaging.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Messaging.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:28Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Notifications.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Notifications.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:34Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.OTP.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.OTP.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:40Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.RateLimiting.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.RateLimiting.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:46Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.RealTime.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.RealTime.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:52Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Scheduling.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Scheduling.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T05:59:58Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Secrets.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Secrets.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T06:00:35Z",
+    "language": "C#"
+   },
+   {
+    "name": "GM.Testing.Samples",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/GM.Testing.Samples",
+    "stars": 0,
+    "pushed_at": "2026-09-01T08:21:41Z",
+    "language": "C#"
+   },
+   {
+    "name": "gmetskhvarishvili",
+    "description": "",
+    "url": "https://github.com/gmetskhvarishvili/gmetskhvarishvili",
+    "stars": 0,
+    "pushed_at": "2026-10-05T10:17:06Z",
+    "language": "Python"
+   }
   ]
  }
 }
