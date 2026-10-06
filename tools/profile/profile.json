@@ -9,14 +9,22 @@
  "years_experience": "13+",
  "links": [
   {
-   "id": "github",
-   "label": "GitHub",
-   "url": "https://github.com/gmetskhvarishvili"
+   "id": "linkedin",
+   "label": "LinkedIn",
+   "handle": "in/gmetskhvarishvili",
+   "url": "https://www.linkedin.com/in/gmetskhvarishvili/"
   },
   {
    "id": "nuget",
    "label": "NuGet",
+   "handle": "profiles/gmetskhvarishvili",
    "url": "https://www.nuget.org/profiles/gmetskhvarishvili"
+  },
+  {
+   "id": "github",
+   "label": "GitHub",
+   "handle": "@gmetskhvarishvili",
+   "url": "https://github.com/gmetskhvarishvili"
   }
  ],
  "experience": [

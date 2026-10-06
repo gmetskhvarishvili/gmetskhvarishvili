@@ -237,20 +237,28 @@ def header(p, c) -> Svg:
 
 
 ICONS = {
+    "linkedin": '<rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="{c}" stroke-width="2"/>'
+                '<circle cx="7.3" cy="7.4" r="1.7" fill="{c}"/><rect x="5.8" y="10.2" width="3" height="8" rx=".6" fill="{c}"/>'
+                '<path d="M11.2 18.2v-8h2.9v1.2c.6-.9 1.6-1.4 2.8-1.4 2 0 3.2 1.3 3.2 3.7v4.5h-3v-4.1c0-1.1-.5-1.7-1.4-1.7s-1.5.6-1.5 1.7v4.1z" fill="{c}"/>',
     "github": '<path fill="{c}" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/>',
     "nuget": '<rect x="1" y="1" width="22" height="22" rx="5" fill="none" stroke="{c}" stroke-width="2"/>'
              '<circle cx="7.6" cy="7.6" r="2.6" fill="{c}"/><circle cx="15" cy="15" r="4.6" fill="{c}"/>',
 }
 
 
-def link_button(link, side: str) -> Svg:
-    w, h = 440, 76
-    svg = Svg(w, h, link["label"], f"{link['label']}: {link['url']}")
-    x0, bw = tiles_x(0 if side == "left" else 1, 2, w)
-    svg.add(f'<rect x="{x0}" y="6.5" width="{bw}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
-    svg.add(f'<g transform="translate({x0+22} 26)">{ICONS[link["id"]].replace("{c}", TEXT)}</g>')
+def link_button(link, col: int, cols: int) -> Svg:
+    w, h = W / cols, 76
+    svg = Svg(round(w, 2), h, link["label"], f"{link['label']}: {link['url']}")
+    x0, bw = tiles_x(col, cols, w)
+    svg.add(f'<rect x="{x0:.1f}" y="6.5" width="{bw:.1f}" height="{h-13}" rx="10" fill="{BG}" stroke="{BORDER}"/>')
+    svg.add(f'<g transform="translate({x0+22:.1f} 26)">{ICONS[link["id"]].replace("{c}", TEXT)}</g>')
     svg.text(x0 + 62, 35, link["label"], size=15, fill=TEXT, weight=600)
-    svg.text(x0 + 62, 54, link["url"].replace("https://", "").replace("www.", ""), size=12.5, fill=SUB)
+    handle = link.get("handle") or link["url"].replace("https://", "").replace("www.", "")
+    room = bw - 62 - 44
+    size = 12.5
+    while tw(handle, size) > room and size > 10:
+        size -= 0.5
+    svg.text(x0 + 62, 54, handle, size=size, fill=SUB)
     arrow(svg, x0 + bw - 28, 38, SUB)
     return svg
 
@@ -259,7 +267,7 @@ def highlights(p, c) -> Svg:
     ng, gh = c["nuget"], c["github"]
     items = [
         (p["years_experience"], "Years of experience", "Engineering & leadership"),
-        (str(ng["package_count"]), "NuGet packages", "Open-source for .NET"),
+        (str(ng["package_count"]), "NuGet packages", "Free to use · .NET"),
         (compact(ng["total_downloads"]), "Package downloads", "All-time on NuGet"),
         (fmt(gh["public_repos"]), "Public repositories", "On GitHub"),
         (fmt(gh["contributions_last_year"]), "Contributions", "GitHub, last 12 months"),
@@ -531,13 +539,13 @@ def main() -> None:
         "samples.svg": section_head(
             p, c, "Sample projects", f"{len(samples)} repositories",
             "Runnable ASP.NET Core applications showing each GM.* package in a realistic setting, with CI, tests and documentation.",
-            f"Sample projects: {len(samples)} open-source GM.*.Samples repositories on GitHub."),
+            f"Sample projects: {len(samples)} public GM.*.Samples repositories on GitHub."),
         "all-samples.svg": wide_button(f"View all {len(samples)} sample repositories on GitHub", "View all sample repositories on GitHub."),
         "expertise.svg": expertise(p, c),
         "footer.svg": footer(p, c),
     }
     for i, l in enumerate(p["links"]):
-        out[f"links/{l['id']}.svg"] = link_button(l, "left" if i % 2 == 0 else "right")
+        out[f"links/{l['id']}.svg"] = link_button(l, i, len(p["links"]))
     for i, pkg in enumerate(tops):
         out[f"packages/{pkg['id']}.svg"] = package_card(pkg, i + 1, i % 2)
     for i, r in enumerate(shown):
@@ -552,6 +560,24 @@ def main() -> None:
     print(f"wrote {len(out)} panels + README.md")
 
 
+def text_version(p, c, tops) -> list[str]:
+    """A plain-text copy of the profile: selectable, searchable and screen-reader friendly."""
+    ng = c["nuget"]
+    T = ["", "<details>", "<summary>Text version</summary>", "",
+         f"### {p['name']}", f"**{p['title']}** · {p['focus']} · {p['location']}", "", p["summary"], "",
+         " · ".join(f"[{l['label']}]({l['url']})" for l in p["links"]), "",
+         "#### Technical expertise", ""]
+    T += [f"- **{g['group']}:** {', '.join(g['items'])}" for g in p["stack"]]
+    T += ["", "#### Experience", ""]
+    T += [f"- **{e['role']}**, {e['org']} ({e['when'].replace('now', 'present')}). {e['note']}" for e in p["experience"]]
+    T += ["", "#### Education", ""]
+    T += [f"- {e['degree']}, {e['school']} ({e['when'].replace('now', 'present')})" for e in p["education"]]
+    T += ["", f"#### NuGet packages ({ng['package_count']} packages, {fmt(ng['total_downloads'])} downloads)", ""]
+    T += [f"- [{x['id']}](https://www.nuget.org/packages/{x['id']}): {first_sentence(x.get('description', ''))}" for x in tops]
+    T += ["", "</details>"]
+    return T
+
+
 def write_readme(p, c, tops, samples, shown) -> None:
     ng = c["nuget"]
 
@@ -563,7 +589,8 @@ def write_readme(p, c, tops, samples, shown) -> None:
 
     L = ['<p align="center">']
     L.append(img("header.svg", f"{p['name']} — {p['title']}. {p['summary']}"))
-    L.append("".join(f'<a href="{l["url"]}">{img("links/" + l["id"] + ".svg", l["label"], "50%")}</a>' for l in p["links"]))
+    lw = f"{100 / len(p['links']):.2f}%"
+    L.append("".join(f'<a href="{l["url"]}">{img("links/" + l["id"] + ".svg", l["label"], lw)}</a>' for l in p["links"]))
     L.append(img("highlights.svg", f"At a glance: {p['years_experience']} years of experience, {ng['package_count']} NuGet packages, "
                                    f"{fmt(ng['total_downloads'])} downloads, {c['github']['public_repos']} public repositories, "
                                    f"{c['github']['contributions_last_year']} contributions in the last year"))
@@ -583,6 +610,7 @@ def write_readme(p, c, tops, samples, shown) -> None:
                  f'{img("all-samples.svg", "View all sample repositories on GitHub")}</a>')
     L.append(img("footer.svg", "Last updated"))
     L.append("</p>")
+    L += text_version(p, c, tops)
     (ROOT / "README.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
