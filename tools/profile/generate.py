@@ -582,7 +582,10 @@ def write_readme(p, c, tops, samples, shown) -> None:
     ng = c["nuget"]
 
     def img(src, alt, width="100%"):
-        return f'<img src="./assets/{src}" width="{width}" align="top" alt="{escape(alt, quote=True)}">'
+        # content hash in the URL so GitHub's image cache never serves a stale panel
+        import hashlib
+        v = hashlib.sha1((ASSETS / src).read_bytes()).hexdigest()[:8]
+        return f'<img src="./assets/{src}?v={v}" width="{width}" align="top" alt="{escape(alt, quote=True)}">'
 
     def row(items, per, width):
         return ["".join(items[i:i + per]) for i in range(0, len(items), per)]
