@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-07",
+ "fetched_at": "2026-10-08",
  "nuget": {
   "package_count": 78,
   "total_downloads": 37555,
@@ -19,7 +19,7 @@
    },
    {
     "id": "GM.Mediator",
-    "version": "1.3.5",
+    "version": "2.0.0",
     "downloads": 1866,
     "description": "A lightweight, dependency-injection-friendly mediator (send, publish, pipeline behaviors) for .NET.",
     "tags": [
@@ -33,7 +33,7 @@
    },
    {
     "id": "GM.EntityFramework.Domain",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "downloads": 1618,
     "description": "Domain building blocks \u2014 entities, value objects, specifications, results, and repository/unit-of-work abstractions \u2014 for DDD-style apps on Entity Framework Core.",
     "tags": [
@@ -47,7 +47,7 @@
    },
    {
     "id": "GM.EntityFramework.Persistence",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "downloads": 1451,
     "description": "EF Core persistence for GM.EntityFramework.Domain \u2014 a generic repository, unit of work with transactions, and an auditing DbContext.",
     "tags": [
@@ -74,7 +74,7 @@
    },
    {
     "id": "GM.EntityFramework",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "downloads": 1101,
     "description": "A DDD + EF Core toolkit for .NET. This meta-package bundles GM.EntityFramework.Domain and GM.EntityFramework.Persistence.",
     "tags": [
@@ -88,7 +88,7 @@
    },
    {
     "id": "GM.API.Application",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 1071,
     "description": "Application-layer building blocks for the GM.API stack: GM.Mediator wiring plus validation and performance pipeline behaviours, and paged-list models. Part of the GM.API family.",
     "tags": [
@@ -116,7 +116,7 @@
    },
    {
     "id": "GM.API",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 1022,
     "description": "An opinionated ASP.NET Core Web API starter for .NET. A single AddGMAPI/UseGMAPI pair wires up controllers, CORS, API versioning, Swagger docs, FluentValidation, Serilog, and middlewares for exception handling, request logging (with sensitive-data masking) and request localization. Bundles the GM.API.* companion packages.",
     "tags": [
@@ -130,7 +130,7 @@
    },
    {
     "id": "GM.API.Shared",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 940,
     "description": "Shared primitives for the GM.API stack, built on GM.Mapper. Part of the GM.API family.",
     "tags": [
@@ -141,7 +141,7 @@
    },
    {
     "id": "GM.API.Middlewares",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 902,
     "description": "ASP.NET Core middlewares for the GM.API stack: exception handling (ProblemDetails), request logging with sensitive-data masking, and request localization. Part of the GM.API family.",
     "tags": [
@@ -155,7 +155,7 @@
    },
    {
     "id": "GM.API.Versioning",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 888,
     "description": "A one-call API versioning setup (URL-segment versioning + API explorer) for the GM.API stack. Part of the GM.API family.",
     "tags": [
@@ -167,7 +167,7 @@
    },
    {
     "id": "GM.API.Cors",
-    "version": "1.6.0",
+    "version": "1.7.1",
     "downloads": 887,
     "description": "A one-call CORS setup for the GM.API stack (AddGMCors / UseGMCors). Part of the GM.API family.",
     "tags": [
@@ -554,7 +554,7 @@
    },
    {
     "id": "GM.OTP.Domain",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "downloads": 283,
     "description": "Domain model for the GM.OTP stack: the OtpChallenge aggregate plus the code-generation, hashing, and clock abstractions. Part of the GM.OTP family.",
     "tags": [
@@ -606,7 +606,7 @@
    },
    {
     "id": "GM.Identity.Domain",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "downloads": 265,
     "description": "Identity domain model \u2014 users, roles, permissions, scopes, clients, sessions, and two-factor auth types \u2014 as EF Core entities for GM-based identity and access systems.",
     "tags": [
@@ -633,23 +633,12 @@
    },
    {
     "id": "GM.Identity.Gateway",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "downloads": 260,
     "description": "Gateway/composition layer for GM.Identity. Placeholder package reserved for the identity gateway abstractions; ships empty for now and fills out in a later release.",
     "tags": [
      "identity",
      "gateway",
-     "dotnet"
-    ]
-   },
-   {
-    "id": "GM.Notifications.SMS",
-    "version": "1.0.1",
-    "downloads": 257,
-    "description": "SMS notification channel for GM.Notifications \u2014 ISmsSenderService, options, and DI wiring (AddSmsNotificationServices).",
-    "tags": [
-     "notifications",
-     "sms",
      "dotnet"
     ]
    },
@@ -665,6 +654,17 @@
      "ab-testing",
      "rollout",
      "targeting"
+    ]
+   },
+   {
+    "id": "GM.Notifications.SMS",
+    "version": "1.0.1",
+    "downloads": 257,
+    "description": "SMS notification channel for GM.Notifications \u2014 ISmsSenderService, options, and DI wiring (AddSmsNotificationServices).",
+    "tags": [
+     "notifications",
+     "sms",
+     "dotnet"
     ]
    },
    {
@@ -759,7 +759,7 @@
    },
    {
     "id": "GM.Gateway",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "downloads": 245,
     "description": "A YARP-based API gateway for the GM.* ecosystem with distributed rate limiting enforced at the edge. AddGMGateway() wires a YARP reverse proxy from configuration and GM.RateLimiting together; each route opts into a named policy via route metadata (RateLimitPolicy / RateLimitPartition), so limits are enforced centrally at the gateway \u2014 across every instance \u2014 before a request is proxied, returning 429 + Retry-After for rejects. Pair with GM.RateLimiting.Redis for the lock-free atomic store.",
     "tags": [
@@ -787,7 +787,7 @@
    },
    {
     "id": "GM.Identity",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "downloads": 239,
     "description": "Identity primitives for GM-based ASP.NET Core apps: PBKDF2 password hashing, secure token generation/hashing, and claims extraction (user/session id, username) from the current HttpContext, wired up with a single AddGMIdentity() call.",
     "tags": [
@@ -801,7 +801,7 @@
    },
    {
     "id": "GM.OTP.Persistence",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "downloads": 239,
     "description": "EF Core persistence for the GM.OTP stack: the OtpChallenge entity configuration. Part of the GM.OTP family.",
     "tags": [
@@ -814,7 +814,7 @@
    },
    {
     "id": "GM.OTP",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "downloads": 238,
     "description": "A lightweight, storage-agnostic one-time password (OTP) core for .NET. OtpManager generates and verifies codes over pluggable code-generation, hashing, and clock abstractions, binding each code to its subject and destination. Part of the GM.OTP family.",
     "tags": [
@@ -842,7 +842,7 @@
    },
    {
     "id": "GM.Identity.Persistence",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "downloads": 235,
     "description": "EF Core persistence for GM.Identity \u2014 entity type configurations mapping the identity domain (users, roles, permissions, scopes, clients, sessions) to a PostgreSQL schema.",
     "tags": [
@@ -1069,14 +1069,14 @@
  "github": {
   "public_repos": 26,
   "followers": 3,
-  "contributions_last_year": 382,
+  "contributions_last_year": 493,
   "repos": [
    {
     "name": "GM.API.Samples",
     "description": "Runnable ASP.NET Core Web API sample for GM.API: controllers, CORS, API versioning, Swagger, FluentValidation, Serilog and middlewares wired with AddGMAPI / UseGMAPI.",
     "url": "https://github.com/gmetskhvarishvili/GM.API.Samples",
     "stars": 0,
-    "pushed_at": "2026-09-01T05:58:01Z",
+    "pushed_at": "2026-10-07T22:17:45Z",
     "language": "C#"
    },
    {
@@ -1116,7 +1116,7 @@
     "description": "Runnable sample for GM.EntityFramework: DDD building blocks on EF Core with entities, value objects, specifications, a generic repository and unit of work.",
     "url": "https://github.com/gmetskhvarishvili/GM.EntityFramework.Samples",
     "stars": 1,
-    "pushed_at": "2026-09-01T05:58:26Z",
+    "pushed_at": "2026-10-07T21:27:50Z",
     "language": "C#"
    },
    {
@@ -1148,7 +1148,7 @@
     "description": "Runnable sample for GM.Gateway: a YARP API gateway with distributed rate limiting enforced at the edge.",
     "url": "https://github.com/gmetskhvarishvili/GM.Gateway.Samples",
     "stars": 0,
-    "pushed_at": "2026-09-01T05:58:47Z",
+    "pushed_at": "2026-10-07T21:28:36Z",
     "language": "C#"
    },
    {
@@ -1180,7 +1180,7 @@
     "description": "Runnable sample for GM.Identity: PBKDF2 password hashing, secure token generation and claims extraction in ASP.NET Core.",
     "url": "https://github.com/gmetskhvarishvili/GM.Identity.Samples",
     "stars": 0,
-    "pushed_at": "2026-09-24T21:36:23Z",
+    "pushed_at": "2026-10-07T22:28:26Z",
     "language": "C#"
    },
    {
@@ -1204,7 +1204,7 @@
     "description": "Runnable CQRS sample for GM.Mediator: thin controllers, commands, queries, notifications and pipeline behaviors for validation and performance logging.",
     "url": "https://github.com/gmetskhvarishvili/GM.Mediator.Samples",
     "stars": 1,
-    "pushed_at": "2026-08-30T20:50:48Z",
+    "pushed_at": "2026-10-07T21:21:04Z",
     "language": "C#"
    },
    {
@@ -1228,7 +1228,7 @@
     "description": "Runnable sample for GM.OTP: one-time password generation and verification bound to a subject and destination.",
     "url": "https://github.com/gmetskhvarishvili/GM.OTP.Samples",
     "stars": 0,
-    "pushed_at": "2026-09-01T05:59:40Z",
+    "pushed_at": "2026-10-07T22:18:36Z",
     "language": "C#"
    },
    {
@@ -1276,7 +1276,7 @@
     "description": "",
     "url": "https://github.com/gmetskhvarishvili/gmetskhvarishvili",
     "stars": 0,
-    "pushed_at": "2026-10-06T16:47:28Z",
+    "pushed_at": "2026-10-07T10:14:34Z",
     "language": "Python"
    }
   ]
