@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-09",
+ "fetched_at": "2026-10-10",
  "nuget": {
   "package_count": 78,
   "total_downloads": 37555,
@@ -1069,7 +1069,7 @@
  "github": {
   "public_repos": 26,
   "followers": 3,
-  "contributions_last_year": 496,
+  "contributions_last_year": 497,
   "repos": [
    {
     "name": "GM.API.Samples",
@@ -1180,7 +1180,7 @@
     "description": "Runnable sample for GM.Identity: PBKDF2 password hashing, secure token generation and claims extraction in ASP.NET Core.",
     "url": "https://github.com/gmetskhvarishvili/GM.Identity.Samples",
     "stars": 0,
-    "pushed_at": "2026-10-09T09:10:44Z",
+    "pushed_at": "2026-10-09T21:54:32Z",
     "language": "C#"
    },
    {
@@ -1276,7 +1276,7 @@
     "description": "",
     "url": "https://github.com/gmetskhvarishvili/gmetskhvarishvili",
     "stars": 0,
-    "pushed_at": "2026-10-08T10:33:28Z",
+    "pushed_at": "2026-10-09T10:31:40Z",
     "language": "Python"
    }
   ]
