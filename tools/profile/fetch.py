@@ -27,28 +27,42 @@ def get_json(url: str, data: bytes | None = None, headers: dict | None = None) -
         return json.load(r)
 
 
+# NuGet's search service runs several replicas whose download counts drift apart
+# (one can lag by days), so query them all and keep the highest count per package.
+SEARCH_HOSTS = ["azuresearch-usnc", "azuresearch-ussc", "azuresearch-ea", "azuresearch-sea"]
+
+
 def fetch_nuget() -> dict:
-    packages, skip = [], 0
-    while True:
-        res = get_json(f"https://azuresearch-usnc.nuget.org/query?q=owner:{LOGIN}&take=200&skip={skip}&prerelease=false&semVerLevel=2.0.0")
-        for p in res["data"]:
-            owners = p.get("owners") or []
-            if isinstance(owners, str):
-                owners = [owners]
-            if LOGIN.lower() in (o.lower() for o in owners):
-                packages.append({
-                    "id": p["id"],
-                    "version": p["version"],
-                    "downloads": int(p.get("totalDownloads", 0)),
-                    "description": (p.get("description") or "").strip(),
-                    "tags": (p.get("tags") or [])[:6],
-                })
-        skip += 200
-        if skip >= res.get("totalHits", 0) or not res["data"]:
-            break
-    if not packages:
+    best: dict[str, dict] = {}
+    for host in SEARCH_HOSTS:
+        skip = 0
+        try:
+            while True:
+                res = get_json(f"https://{host}.nuget.org/query?q=owner:{LOGIN}&take=200&skip={skip}"
+                               "&prerelease=false&semVerLevel=2.0.0")
+                for p in res["data"]:
+                    owners = p.get("owners") or []
+                    if isinstance(owners, str):
+                        owners = [owners]
+                    if LOGIN.lower() not in (o.lower() for o in owners):
+                        continue
+                    pkg = {
+                        "id": p["id"],
+                        "version": p["version"],
+                        "downloads": int(p.get("totalDownloads", 0)),
+                        "description": (p.get("description") or "").strip(),
+                        "tags": (p.get("tags") or [])[:6],
+                    }
+                    if pkg["id"] not in best or pkg["downloads"] > best[pkg["id"]]["downloads"]:
+                        best[pkg["id"]] = pkg
+                skip += 200
+                if skip >= res.get("totalHits", 0) or not res["data"]:
+                    break
+        except Exception as e:  # one replica failing is fine
+            print(f"nuget {host}: {e}", file=sys.stderr)
+    if not best:
         raise RuntimeError("NuGet returned no packages")
-    packages.sort(key=lambda x: -x["downloads"])
+    packages = sorted(best.values(), key=lambda x: -x["downloads"])
     return {"package_count": len(packages), "total_downloads": sum(p["downloads"] for p in packages), "packages": packages}
 
 
