@@ -34,15 +34,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Render panels
+      - name: Write README
         run: python tools/profile/generate.py
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A assets README.md tools/profile/cache.json tools/profile/fonts
+          git add -A .
           if ! git diff --cached --quiet; then
-            git commit -m "chore(profile): refresh panels"
+            git commit -m "chore(profile): refresh README"
             git push
           fi
