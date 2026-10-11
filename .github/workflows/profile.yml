@@ -27,8 +27,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install fonttools==4.*
-
       - name: Fetch live numbers
         run: python tools/profile/fetch.py
         env:
