@@ -12,7 +12,7 @@ Engineering leader with 13+ years of experience designing and delivering large-s
 
 | Experience | NuGet packages | Package downloads | Public repositories | Contributions |
 |:---:|:---:|:---:|:---:|:---:|
-| **13+ years** | **78** | **41,693** | **26** | **500** |
+| **13+ years** | **78** | **41,693** | **26** | **501** |
 | engineering & leadership | free to use · .NET | all-time on NuGet | on GitHub | last 12 months |
 
 ## Technical expertise
