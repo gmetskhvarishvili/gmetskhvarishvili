@@ -543,6 +543,7 @@ def main() -> None:
         "all-samples.svg": wide_button(f"View all {len(samples)} sample repositories on GitHub", "View all sample repositories on GitHub."),
         "expertise.svg": expertise(p, c),
         "footer.svg": footer(p, c),
+        **({"web.svg": wide_button("Open the web version: the same profile as selectable, copyable text", "Web version of this profile.")} if p.get("website") else {}),
     }
     for i, l in enumerate(p["links"]):
         out[f"links/{l['id']}.svg"] = link_button(l, i, len(p["links"]))
@@ -594,6 +595,8 @@ def write_readme(p, c, tops, samples, shown) -> None:
     L.append(img("header.svg", f"{p['name']} — {p['title']}. {p['summary']}"))
     lw = f"{100 / len(p['links']):.2f}%"
     L.append("".join(f'<a href="{l["url"]}">{img("links/" + l["id"] + ".svg", l["label"], lw)}</a>' for l in p["links"]))
+    if p.get("website"):
+        L.append(f'<a href="{p["website"]}">{img("web.svg", "Web version of this profile with copyable text")}</a>')
     L.append(img("highlights.svg", f"At a glance: {p['years_experience']} years of experience, {ng['package_count']} NuGet packages, "
                                    f"{fmt(ng['total_downloads'])} downloads, {c['github']['public_repos']} public repositories, "
                                    f"{c['github']['contributions_last_year']} contributions in the last year"))
