@@ -2,11 +2,11 @@
  "login": "gmetskhvarishvili",
  "name": "Giorgi Metskhvarishvili",
  "title": "Engineering Leader · Software & Solution Architect",
- "focus": "Cloud-native & distributed systems · .NET",
- "summary": "Engineering leader with 13+ years of experience designing and delivering large-scale distributed systems across banking, government, gaming and enterprise domains. I architect platforms from the ground up with Clean Architecture, CQRS, Domain-Driven Design and event-driven principles, and have led cross-functional organizations of up to 60 professionals.",
+ "focus": ".NET, cloud-native & distributed systems",
+ "summary": "Engineering leader and software architect with 10+ years of experience building large-scale distributed systems in gaming, banking, government and iGaming. I architected a mobile esports platform from scratch to 40+ microservices, 2.6M+ users and 99.98% availability, broke a bank's vendor monolith into in-house microservices handling 1–1.5M transactions a day, and led a ~60-person government IT organization through the modernization of 26+ legacy applications. Hands-on in C#/.NET and cloud-native infrastructure, with deep expertise in DDD, CQRS, event-driven architecture, payments, security and fraud prevention.",
  "location": "Tbilisi, Georgia",
- "availability": "Open to new opportunities · on-site, hybrid or remote",
- "years_experience": "13+",
+ "availability": "Open to new opportunities · remote or relocation · full-time or B2B",
+ "years_experience": "10+",
  "links": [
   {
    "id": "linkedin",
@@ -31,111 +31,104 @@
  "experience": [
   {
    "role": "Lead Software Architect",
-   "org": "MobileESports",
+   "org": "MobileESports (part of BoomBit)",
    "when": "Dec 2022 – now",
-   "where": "Gaming & esports",
-   "note": "Architected a global esports platform from the ground up: 35+ microservices, ~80 gaming products, millions of users, 99.98% uptime and ~50 production deployments a week."
+   "where": "Gaming & esports · Remote",
+   "note": "Architected the platform from scratch and launched it in 8 months: 40+ microservices, 2.6M+ users, 3.4M+ payout transactions, ~2,900 automated tournaments a day, 99.98% availability and ~50 production deployments a week. Built the fraud-prevention system (43,000+ accounts blocked or suspended)."
   },
   {
    "role": "Software Engineering Team Lead",
    "org": "Betsson Georgia",
    "when": "Mar 2026 – Jun 2026",
-   "where": "Sports, gaming & betting",
-   "note": "Led ~15 engineers across five product teams; drove the modernization roadmap, archived 300+ repositories, decommissioned 50+ services and moved logging to Datadog and secrets to Doppler."
+   "where": "iGaming & sports betting",
+   "note": "Led ~15 engineers across five product teams. Migrated Sports services to AWS (EKS, RDS, ElastiCache, Amazon MQ), cutting their infrastructure costs by 30% and making their API responses 35% faster; archived 300+ repositories and decommissioned 50+ obsolete services."
   },
   {
    "role": "Associate Partner, Software Development Chapter Lead",
-   "org": "TBC Bank — Cards & Loyalty",
-   "when": "Jul 2024 – Mar 2026",
+   "org": "TBC Bank",
+   "when": "Apr 2023 – Mar 2026",
    "where": "Banking",
-   "note": "Led backend chapters of 10–20 engineers supporting 10+ product teams across cards, loyalty, subscriptions and government-service integrations."
+   "note": "Led the Backend Chapter of 10–20 engineers across 10+ product teams and recruited 20+ engineers. Broke the vendor's monolith into ~15 in-house asynchronous microservices and personally built the Transfers service, handling 1–1.5M transactions a day."
   },
   {
    "role": "Software Solutions Architect",
-   "org": "Raffle Management Platform",
+   "org": "Kanti",
    "when": "May 2024 – Oct 2025",
-   "where": "Marketing",
-   "note": "Designed the end-to-end architecture of a QR-code raffle platform with automated daily draws, rule-based winner selection and notifications."
-  },
-  {
-   "role": "Associate Partner, Software Development Chapter Lead",
-   "org": "TBC Bank — Digital Bank Transformation",
-   "when": "Apr 2023 – Sep 2024",
-   "where": "Banking",
-   "note": "Drove the insourcing of transfers, payments and accounts from vendor platforms; recruited 20+ engineers and supported the growth of 50+."
+   "where": "Marketing & FMCG",
+   "note": "Designed and single-handedly built the backend of a raffle platform for the 16th energy drink brand: 10M+ unique product QR codes, millions of participants and an automated daily draw engine."
   },
   {
    "role": "Deputy Head of IT Department",
    "org": "Service Agency of the Ministry of Internal Affairs of Georgia",
    "when": "Nov 2020 – Apr 2023",
    "where": "Public sector",
-   "note": "Led ~60 professionals delivering nationwide platforms for vehicle registration, driving licences and firearms; 30+ integrations; legacy systems re-engineered into microservices."
+   "note": "Built and led a ~60-person technology organization. Modernized 26+ legacy Delphi and classic ASP applications into .NET microservices, served tens of thousands of citizens daily through two mobile apps, a web portal and APIs, and managed 30+ secure integrations."
   },
   {
    "role": "Senior Software Developer",
-   "org": "TBC Bank — Core Banking Modernization",
+   "org": "TBC Bank",
    "when": "May 2020 – Nov 2020",
-   "where": "Banking",
-   "note": "Built backend capabilities for an in-house replacement of the vendor-provided B6 core banking platform."
+   "where": "Banking · Remote",
+   "note": "Moved vendor B6 front-office modules (cash-in/cash-out, customer registration) in-house and rolled the system out from a pilot branch to all branches."
   },
   {
    "role": "Software Solutions Architect",
    "org": "Greennet",
    "when": "Sep 2019 – May 2020",
-   "where": "Consulting",
-   "note": "Application performance monitoring and observability consulting with Cisco AppDynamics: assessments, solution design and proposals."
+   "where": "IT consulting & pre-sales",
+   "note": "Led Cisco AppDynamics observability pre-sales and consulting for 10–15 banks, government agencies, public companies and betting operators."
   },
   {
    "role": "Senior Software Developer, Technical Lead",
    "org": "Softx",
    "when": "Jun 2018 – May 2020",
    "where": "Insurance, media & services",
-   "note": "Led delivery of an insurance management platform (Global Benefits Georgia), the silksport.ge media platform, a salon booking platform and a document workflow system."
+   "note": "Led 6 developers and coded full-stack (.NET, Angular) on platforms for Global Benefits Georgia, Silknet (silksport.ge) and a multi-tenant SaaS serving 15–20 salons."
   },
   {
    "role": "Android Developer",
-   "org": "Go Real Europe",
+   "org": "GoRealTravel (formerly GoRealEurope)",
    "when": "May 2019 – Apr 2020",
-   "where": "Travel & hospitality",
-   "note": "Sole Android developer of a customer-facing travel management application."
+   "where": "Travel & hospitality · Remote",
+   "note": "Sole Android developer of a travel app covering 85+ cities across Europe and Asia, with offline booking access and Google Play releases."
   },
   {
    "role": "Senior Software Developer",
    "org": "Treepex",
    "when": "Nov 2017 – May 2018",
    "where": "Environmental technology",
-   "note": "Customer, B2B and admin platforms, backend APIs and a native Android app for forest rangers."
+   "note": "Built web, B2B and backend platforms for tens of thousands of customers, plus a ranger Android app supporting 100,000+ trees planted."
   },
   {
    "role": "Android Developer",
-   "org": "Tbilisi State University — Online Campus",
+   "org": "Tbilisi State University",
    "when": "Sep 2017 – Dec 2017",
    "where": "Education",
-   "note": "Grant-funded mobile platform connecting students with the university administration."
+   "note": "Sole Android developer of a grant-funded student social and career platform with profiles, job postings and a CV generator."
   },
   {
-   "role": "Software Developer Intern",
+   "role": "Junior Software Developer",
    "org": "Ministry of Defence of Georgia",
    "when": "Jun 2017 – Nov 2017",
    "where": "Public sector",
-   "note": "Independently built Indact, a legal document management system adopted by the Legal Department."
+   "note": "Independently designed, built and deployed Indact, a legal document management system used across the Ministry for tens of thousands of legal acts."
   },
   {
-   "role": "Software Developer Intern",
+   "role": "Junior Software Developer",
    "org": "Revenue Service of Georgia",
    "when": "May 2016 – Jul 2016",
    "where": "Government, tax & customs",
-   "note": "Android application development within the IT Department."
+   "note": "Built features for the public taxpayer Android app, shipped to production."
   }
  ],
  "education": [
   {
    "degree": "Master of Information Technology Governance and Strategy",
    "school": "Georgian American University",
-   "when": "2026 – now"
+   "when": "2026 – 2028 (expected)"
   },
   {
-   "degree": "Bachelor of Informatics",
+   "degree": "Bachelor of Informatics (Computer Science)",
    "school": "Ivane Javakhishvili Tbilisi State University",
    "when": "2013 – 2018"
   }
@@ -144,12 +137,12 @@
   {
    "group": "Architecture",
    "items": [
-    "Clean Architecture",
-    "CQRS",
-    "Domain-Driven Design",
-    "Event-Driven Design",
-    "Microservices",
     "Distributed Systems",
+    "Microservices",
+    "Event-Driven Design",
+    "Domain-Driven Design",
+    "CQRS",
+    "Clean Architecture",
     "Event Storming"
    ]
   },
@@ -169,9 +162,10 @@
     ".NET",
     "ASP.NET Core",
     "Entity Framework",
+    "FluentValidation",
+    "Polly",
+    "Wolverine",
     "SignalR",
-    "Identity Server 4",
-    "MediatR",
     "Quartz",
     "Angular",
     "React",
@@ -194,14 +188,14 @@
   {
    "group": "Cloud & DevOps",
    "items": [
-    "AWS",
+    "AWS (EKS, RDS, ElastiCache)",
     "Microsoft Azure",
+    "DigitalOcean",
     "Docker",
     "Kubernetes",
-    "Argo CD",
-    "Rancher",
-    "OpenShift",
     "Terraform",
+    "Argo CD",
+    "Bitbucket Pipelines",
     "HashiCorp Vault",
     "Doppler"
    ]
