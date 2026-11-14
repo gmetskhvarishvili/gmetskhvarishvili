@@ -1,13 +1,13 @@
 {
- "fetched_at": "2026-11-13",
+ "fetched_at": "2026-11-14",
  "nuget": {
   "package_count": 88,
-  "total_downloads": 89752,
+  "total_downloads": 91201,
   "packages": [
    {
     "id": "GM.EntityFramework.Domain",
     "version": "3.0.0",
-    "downloads": 4371,
+    "downloads": 4449,
     "description": "Domain building blocks \u2014 entities, value objects, specifications, results, and repository/unit-of-work abstractions \u2014 for DDD-style apps on Entity Framework Core.",
     "tags": [
      "entity-framework-core",
@@ -21,7 +21,7 @@
    {
     "id": "GM.Exceptions",
     "version": "1.3.0",
-    "downloads": 4129,
+    "downloads": 4152,
     "description": "A collection of reusable exception types for .NET apps \u2014 a common base exception, HTTP-style exceptions (not found, bad request, already exists, ...), and a FluentValidation-aware ValidationException.",
     "tags": [
      "exceptions",
@@ -34,7 +34,7 @@
    {
     "id": "GM.FileStorage",
     "version": "6.0.0",
-    "downloads": 3160,
+    "downloads": 3289,
     "description": "A provider-agnostic file/blob storage abstraction for .NET: IFileStorageService with streaming Upload/Download, Exists/Delete, presigned URLs, metadata + checksum validation, and a pluggable key/path strategy \u2014 with config-driven provider selection. Add a backend with GM.FileStorage.Local (and, later, GM.FileStorage.S3 / GM.FileStorage.AzureBlob).",
     "tags": [
      "file-storage",
@@ -48,7 +48,7 @@
    {
     "id": "GM.Mediator",
     "version": "2.0.0",
-    "downloads": 2897,
+    "downloads": 2900,
     "description": "A lightweight, dependency-injection-friendly mediator (send, publish, pipeline behaviors) for .NET.",
     "tags": [
      "mediator",
@@ -62,7 +62,7 @@
    {
     "id": "GM.EntityFramework.Persistence",
     "version": "3.0.0",
-    "downloads": 2875,
+    "downloads": 2880,
     "description": "EF Core persistence for GM.EntityFramework.Domain \u2014 a generic repository, unit of work with transactions, and an auditing DbContext.",
     "tags": [
      "entity-framework-core",
@@ -75,7 +75,7 @@
    {
     "id": "GM.API.Application",
     "version": "2.4.0",
-    "downloads": 2650,
+    "downloads": 2665,
     "description": "Application-layer building blocks for the GM.API stack: GM.Mediator wiring plus validation and performance pipeline behaviours, and paged-list models. Part of the GM.API family.",
     "tags": [
      "mediator",
@@ -89,7 +89,7 @@
    {
     "id": "GM.API.Shared",
     "version": "2.4.0",
-    "downloads": 2589,
+    "downloads": 2592,
     "description": "Shared primitives for the GM.API stack, built on GM.Mapper. Part of the GM.API family.",
     "tags": [
      "shared",
@@ -100,7 +100,7 @@
    {
     "id": "GM.DistributedLock",
     "version": "1.2.0",
-    "downloads": 2428,
+    "downloads": 2474,
     "description": "A small distributed-lock abstraction for .NET: IDistributedLock with TryAcquire / Acquire (blocking with retry) returning an IAsyncDisposable handle that releases on dispose. Ships a single-process in-memory implementation for dev and tests; add a real backend with GM.DistributedLock.Redis.",
     "tags": [
      "distributed-lock",
@@ -114,7 +114,7 @@
    {
     "id": "GM.API",
     "version": "2.4.0",
-    "downloads": 2402,
+    "downloads": 2412,
     "description": "An opinionated ASP.NET Core Web API starter for .NET. A single AddGMAPI/UseGMAPI pair wires up controllers, CORS, API versioning, Swagger docs, FluentValidation, Serilog, and middlewares for exception handling, request logging (with sensitive-data masking) and request localization. Loads secrets into configuration from a local appsecrets.json or the store the SECRETS_PROVIDER environment variable names (Doppler, AWS Secrets Manager, Azure Key Vault, HashiCorp Vault). Bundles the GM.API.* companion packages.",
     "tags": [
      "aspnetcore",
@@ -128,7 +128,7 @@
    {
     "id": "GM.Caching",
     "version": "1.2.0",
-    "downloads": 2320,
+    "downloads": 2347,
     "description": "A small caching abstraction for .NET: ICacheService with typed Get/Set/Remove, GetOrCreateAsync (single-flight, no cache stampede), and absolute/sliding expiration \u2014 plus an in-memory implementation over IMemoryCache. Add a distributed backend with GM.Caching.Redis.",
     "tags": [
      "caching",
@@ -141,7 +141,7 @@
    {
     "id": "GM.API.Middlewares",
     "version": "2.4.0",
-    "downloads": 2295,
+    "downloads": 2311,
     "description": "ASP.NET Core middlewares for the GM.API stack: exception handling (ProblemDetails), request logging with sensitive-data masking, and request localization. Part of the GM.API family.",
     "tags": [
      "middleware",
@@ -155,7 +155,7 @@
    {
     "id": "GM.API.Versioning",
     "version": "2.4.0",
-    "downloads": 2289,
+    "downloads": 2300,
     "description": "A one-call API versioning setup (URL-segment versioning + API explorer) for the GM.API stack. Part of the GM.API family.",
     "tags": [
      "api-versioning",
@@ -167,7 +167,7 @@
    {
     "id": "GM.API.Cors",
     "version": "2.4.0",
-    "downloads": 2283,
+    "downloads": 2288,
     "description": "A one-call CORS setup for the GM.API stack (AddGMCors / UseGMCors). Part of the GM.API family.",
     "tags": [
      "cors",
@@ -179,7 +179,7 @@
    {
     "id": "GM.FileStorage.Local",
     "version": "6.0.0",
-    "downloads": 2219,
+    "downloads": 2232,
     "description": "Local disk file-storage provider for GM.FileStorage \u2014 streams files to a root directory with SHA-256 checksum validation and sidecar metadata. Ideal for development and tests. Register with AddGMLocalFileStorage() and select it via FileStorage:Provider = \"Local\".",
     "tags": [
      "file-storage",
@@ -193,7 +193,7 @@
    {
     "id": "GM.Mapper",
     "version": "1.3.3",
-    "downloads": 2175,
+    "downloads": 2178,
     "description": "A tiny, dependency-injection-friendly object mapper for .NET, built on Mapster.",
     "tags": [
      "mapper",
@@ -207,7 +207,7 @@
    {
     "id": "GM.FileStorage.S3",
     "version": "6.0.0",
-    "downloads": 2111,
+    "downloads": 2134,
     "description": "AWS S3 (and S3-compatible, e.g. MinIO) provider for GM.FileStorage: streaming Put/Get, presigned read/write URLs, object metadata, and canned-ACL visibility. Register with AddGMS3FileStorage() and select it via FileStorage:Provider = \"S3\".",
     "tags": [
      "file-storage",
@@ -221,7 +221,7 @@
    {
     "id": "GM.FileStorage.Domain",
     "version": "6.0.0",
-    "downloads": 2002,
+    "downloads": 2086,
     "description": "Domain model for the GM.FileStorage catalog: the GMStoredFile aggregate (id, tenant, storage key, name, content type, size, checksum, integrity check, metadata) with soft delete and domain events for uploads, downloads, deletes and restores, and the GMStorageCleanup queue. Part of the GM.FileStorage family.",
     "tags": [
      "file-storage",
@@ -233,23 +233,9 @@
     ]
    },
    {
-    "id": "GM.FileStorage.Persistence",
-    "version": "6.0.0",
-    "downloads": 1792,
-    "description": "EF Core persistence for GM.FileStorage \u2014 entity type configurations mapping the stored-file domain (files and their searchable metadata) to gm_file_storage tables. Part of the GM.FileStorage family.",
-    "tags": [
-     "file-storage",
-     "blob-storage",
-     "persistence",
-     "entity-framework-core",
-     "postgresql",
-     "npgsql"
-    ]
-   },
-   {
     "id": "GM.FileStorage.AzureBlob",
     "version": "6.0.0",
-    "downloads": 1777,
+    "downloads": 2080,
     "description": "Azure Blob Storage provider for GM.FileStorage: streaming block-blob upload/download, SAS URLs, and blob metadata. Register with AddGMAzureBlobFileStorage() and select it via FileStorage:Provider = \"AzureBlob\".",
     "tags": [
      "file-storage",
@@ -261,9 +247,23 @@
     ]
    },
    {
+    "id": "GM.FileStorage.Persistence",
+    "version": "6.0.0",
+    "downloads": 1805,
+    "description": "EF Core persistence for GM.FileStorage \u2014 entity type configurations mapping the stored-file domain (files and their searchable metadata) to gm_file_storage tables. Part of the GM.FileStorage family.",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "persistence",
+     "entity-framework-core",
+     "postgresql",
+     "npgsql"
+    ]
+   },
+   {
     "id": "GM.EntityFramework",
     "version": "3.0.0",
-    "downloads": 1699,
+    "downloads": 1701,
     "description": "A DDD + EF Core toolkit for .NET. This meta-package bundles GM.EntityFramework.Domain and GM.EntityFramework.Persistence.",
     "tags": [
      "entity-framework-core",
@@ -277,7 +277,7 @@
    {
     "id": "GM.FileStorage.Encryption",
     "version": "6.0.0",
-    "downloads": 1640,
+    "downloads": 1659,
     "description": "Encryption at rest for GM.FileStorage: every file is encrypted with its own AES-256-GCM key (streamed in authenticated chunks), wrapped by a master key from configuration \u2014 e.g. supplied by GM.Secrets. Works on every provider (local disk, S3, Azure Blob) and supports master-key rotation. Register with AddGMFileStorageEncryption().",
     "tags": [
      "file-storage",
@@ -291,7 +291,7 @@
    {
     "id": "GM.Documentation",
     "version": "1.3.1",
-    "downloads": 1574,
+    "downloads": 1575,
     "description": "A lightweight, configuration-driven Swagger/OpenAPI setup for ASP.NET Core. One call wires up Swashbuckle with API versioning, FluentValidation rules, OAuth2 security, required-header parameters, custom date formats, and a styled Swagger UI \u2014 all from configuration.",
     "tags": [
      "swagger",
@@ -305,7 +305,7 @@
    {
     "id": "GM.Identity.Domain",
     "version": "4.0.0",
-    "downloads": 1353,
+    "downloads": 1398,
     "description": "Identity domain model \u2014 users, roles, permissions, scopes, clients, sessions, and two-factor auth types \u2014 as EF Core entities for GM-based identity and access systems.",
     "tags": [
      "identity",
@@ -331,23 +331,9 @@
     ]
    },
    {
-    "id": "GM.DistributedLock.Redis",
-    "version": "1.2.0",
-    "downloads": 1126,
-    "description": "A Redis-backed IDistributedLock for GM.DistributedLock (StackExchange.Redis): acquire with SET NX PX and release with an owner-checked Lua script, so a lock is only ever released by its owner. Register with AddGMRedisDistributedLock().",
-    "tags": [
-     "distributed-lock",
-     "redis",
-     "mutex",
-     "lock",
-     "concurrency",
-     "stackexchange-redis"
-    ]
-   },
-   {
     "id": "GM.RateLimiting",
     "version": "1.2.0",
-    "downloads": 1120,
+    "downloads": 1165,
     "description": "Distributed rate limiting for the GM.* ecosystem. A provider-agnostic IRateLimiterService with policy-based checks (TryAcquireAsync(key, policy)) and three per-policy algorithms \u2014 fixed window, sliding window, and token bucket. Counters live in GM.Caching so limits hold across every service instance (unlike ASP.NET Core's per-process limiter), and the check-and-increment is made atomic by a swappable store (default backed by GM.DistributedLock). Composable key strategies (per-user / per-API-key / per-IP / per-endpoint), policies from appsettings or fluent code, and a 429-friendly result (limit / remaining / retry-after). One call \u2014 AddGMRateLimiting() \u2014 to wire it up.",
     "tags": [
      "rate-limiting",
@@ -359,9 +345,23 @@
     ]
    },
    {
+    "id": "GM.DistributedLock.Redis",
+    "version": "1.2.0",
+    "downloads": 1130,
+    "description": "A Redis-backed IDistributedLock for GM.DistributedLock (StackExchange.Redis): acquire with SET NX PX and release with an owner-checked Lua script, so a lock is only ever released by its owner. Register with AddGMRedisDistributedLock().",
+    "tags": [
+     "distributed-lock",
+     "redis",
+     "mutex",
+     "lock",
+     "concurrency",
+     "stackexchange-redis"
+    ]
+   },
+   {
     "id": "GM.Secrets",
     "version": "2.0.0",
-    "downloads": 1070,
+    "downloads": 1074,
     "description": "Layers an app's secrets into IConfiguration, so code reads them like any other setting (IConfiguration, IOptions<T>, connection strings) without knowing where they came from. builder.AddGMSecrets() adds a local, gitignored appsecrets.json over appsettings, then the secret store named by the SECRETS_PROVIDER environment variable \u2014 Doppler, AWS Secrets Manager, Azure Key Vault or HashiCorp Vault, via GM.Secrets.Doppler / AwsSecretsManager / AzureKeyVault / Vault \u2014 with optional periodic reload for rotation.",
     "tags": [
      "secrets",
@@ -375,7 +375,7 @@
    {
     "id": "GM.Caching.Redis",
     "version": "1.2.0",
-    "downloads": 1029,
+    "downloads": 1071,
     "description": "A Redis-backed ICacheService for GM.Caching (StackExchange.Redis): distributed, JSON-serialized caching with GetOrCreateAsync, key prefixing, and absolute/sliding expiration. Register with AddGMRedisCaching().",
     "tags": [
      "caching",
@@ -389,7 +389,7 @@
    {
     "id": "GM.FileStorage.MalwareScanner",
     "version": "6.0.0",
-    "downloads": 988,
+    "downloads": 1051,
     "description": "Malware scanning for GM.FileStorage, switched on by configuration (FileStorage:MalwareScanner:Enabled): every upload is scanned with ClamAV as it streams into storage (before encryption at rest), and an infected file is deleted and refused. Fails closed when ClamAV can't answer. IMalwareScanner scans anything else; includes a readiness check. Register with AddGMFileStorageMalwareScanner().",
     "tags": [
      "file-storage",
@@ -403,7 +403,7 @@
    {
     "id": "GM.Messaging.Domain",
     "version": "1.2.1",
-    "downloads": 938,
+    "downloads": 939,
     "description": "Domain primitives for the GM.Messaging stack: integration events plus inbox and outbox message entities. Part of the GM.Messaging family.",
     "tags": [
      "messaging",
@@ -431,7 +431,7 @@
    {
     "id": "GM.Identity.Gateway",
     "version": "4.0.0",
-    "downloads": 878,
+    "downloads": 919,
     "description": "Gateway/composition layer for GM.Identity. Placeholder package reserved for the identity gateway abstractions; ships empty for now and fills out in a later release.",
     "tags": [
      "identity",
@@ -440,9 +440,23 @@
     ]
    },
    {
+    "id": "GM.Identity",
+    "version": "4.0.0",
+    "downloads": 878,
+    "description": "Identity primitives for GM-based ASP.NET Core apps: PBKDF2 password hashing, secure token generation/hashing, and claims extraction (user/session id, username) from the current HttpContext, wired up with a single AddGMIdentity() call.",
+    "tags": [
+     "identity",
+     "authentication",
+     "password-hashing",
+     "pbkdf2",
+     "claims",
+     "tokens"
+    ]
+   },
+   {
     "id": "GM.HttpClient",
     "version": "1.2.1",
-    "downloads": 860,
+    "downloads": 864,
     "description": "A lightweight, dependency-injection-friendly HttpClient for .NET. Wires up Refit clients with configurable Polly resilience (retry, circuit breaker, timeout, fallback) and delegating handlers for authorization, response caching, structured logging, header injection, and HTTP context propagation \u2014 from a single registration call.",
     "tags": [
      "httpclient",
@@ -454,17 +468,17 @@
     ]
    },
    {
-    "id": "GM.Identity",
-    "version": "4.0.0",
-    "downloads": 856,
-    "description": "Identity primitives for GM-based ASP.NET Core apps: PBKDF2 password hashing, secure token generation/hashing, and claims extraction (user/session id, username) from the current HttpContext, wired up with a single AddGMIdentity() call.",
+    "id": "GM.Idempotency",
+    "version": "1.1.0",
+    "downloads": 854,
+    "description": "Idempotency-key management for the GM.* ecosystem. A provider-agnostic IIdempotencyService (IsProcessed / MarkAsProcessed / TryGetCachedResult, plus a race-safe ExecuteAsync check-and-set) backed by GM.Caching for TTL-based dedup-key storage and guarded by GM.DistributedLock so two near-simultaneous duplicates cannot both pass the \"not yet processed\" gate. Stores enough of the original result to replay it safely. Flexible key strategy (caller-supplied or derived/hashed) and one call \u2014 AddGMIdempotency() \u2014 to wire it up. HTTP middleware and GM.Mediator behavior ship in the GM.Idempotency.Http / .Mediator packages.",
     "tags": [
-     "identity",
-     "authentication",
-     "password-hashing",
-     "pbkdf2",
-     "claims",
-     "tokens"
+     "idempotency",
+     "idempotent",
+     "deduplication",
+     "exactly-once",
+     "distributed-lock",
+     "caching"
     ]
    },
    {
@@ -482,23 +496,9 @@
     ]
    },
    {
-    "id": "GM.HealthChecks.EntityFramework",
-    "version": "1.0.2",
-    "downloads": 835,
-    "description": "Database connectivity health check for GM.HealthChecks: verifies a DbContext can reach its database (Database.CanConnectAsync). Works with any EF Core provider, including GM.EntityFramework's GenericDbContext. Register with AddGMDatabaseCheck<TContext>().",
-    "tags": [
-     "health-checks",
-     "healthcheck",
-     "entity-framework-core",
-     "database",
-     "readiness",
-     "dotnet"
-    ]
-   },
-   {
     "id": "GM.Identity.Persistence",
     "version": "4.0.0",
-    "downloads": 833,
+    "downloads": 839,
     "description": "EF Core persistence for GM.Identity \u2014 entity type configurations mapping the identity domain (users, roles, permissions, scopes, clients, sessions) to a PostgreSQL schema.",
     "tags": [
      "identity",
@@ -510,17 +510,17 @@
     ]
    },
    {
-    "id": "GM.Idempotency",
-    "version": "1.1.0",
-    "downloads": 832,
-    "description": "Idempotency-key management for the GM.* ecosystem. A provider-agnostic IIdempotencyService (IsProcessed / MarkAsProcessed / TryGetCachedResult, plus a race-safe ExecuteAsync check-and-set) backed by GM.Caching for TTL-based dedup-key storage and guarded by GM.DistributedLock so two near-simultaneous duplicates cannot both pass the \"not yet processed\" gate. Stores enough of the original result to replay it safely. Flexible key strategy (caller-supplied or derived/hashed) and one call \u2014 AddGMIdempotency() \u2014 to wire it up. HTTP middleware and GM.Mediator behavior ship in the GM.Idempotency.Http / .Mediator packages.",
+    "id": "GM.HealthChecks.EntityFramework",
+    "version": "1.0.2",
+    "downloads": 836,
+    "description": "Database connectivity health check for GM.HealthChecks: verifies a DbContext can reach its database (Database.CanConnectAsync). Works with any EF Core provider, including GM.EntityFramework's GenericDbContext. Register with AddGMDatabaseCheck<TContext>().",
     "tags": [
-     "idempotency",
-     "idempotent",
-     "deduplication",
-     "exactly-once",
-     "distributed-lock",
-     "caching"
+     "health-checks",
+     "healthcheck",
+     "entity-framework-core",
+     "database",
+     "readiness",
+     "dotnet"
     ]
    },
    {
@@ -540,7 +540,7 @@
    {
     "id": "GM.Idempotency.Http",
     "version": "1.1.0",
-    "downloads": 776,
+    "downloads": 777,
     "description": "HTTP integration for GM.Idempotency: an ASP.NET Core middleware that reads a client-supplied Idempotency-Key header, short-circuits duplicate unsafe (POST/PUT/PATCH) requests via GM.Idempotency's distributed-lock-guarded check-and-set, and replays the stored response (status, allow-listed headers, body) so a retry gets the exact same result. Opt in globally or per-endpoint with [Idempotent]. Register with AddGMIdempotencyHttp() + UseGMIdempotency().",
     "tags": [
      "idempotency",
@@ -580,9 +580,23 @@
     ]
    },
    {
+    "id": "GM.FileStorage.Catalog",
+    "version": "6.0.0",
+    "downloads": 649,
+    "description": "Workflows for keeping GM.FileStorage files in your database: deleting the bytes queued in the GMStorageCleanup queue (claim, delete, retry with backoff), purging files for good, purging files deleted long ago, checking stored bytes against the catalog (size, SHA-256, decryption, a malware rescan), and filtering files by tenant. Works over your app's GMStoredFile / GMStorageCleanup aggregates and GM.EntityFramework repositories; you schedule the batches. Part of the GM.FileStorage family.",
+    "tags": [
+     "file-storage",
+     "blob-storage",
+     "catalog",
+     "retention",
+     "integrity",
+     "cleanup"
+    ]
+   },
+   {
     "id": "GM.Scheduling",
     "version": "1.0.0",
-    "downloads": 617,
+    "downloads": 647,
     "description": "Job scheduling for the GM.* ecosystem, wrapping Quartz.NET behind a clean provider abstraction. Implement IScheduledJob and schedule it with IJobScheduler (ScheduleAsync / ScheduleRecurringAsync with cron / Pause / Resume / TriggerNow) \u2014 no Quartz types (ITrigger, IJobDetail) leak to your code. Recurring jobs are guarded by GM.DistributedLock so a cron fires once across every scaled-out instance, each execution runs in its own DI scope (scoped DbContext / GM.Mediator work correctly), per-job retry policies handle transient failures, and execution history exposes last-run status. One call \u2014 AddGMScheduling() \u2014 with fluent or attribute-based job registration.",
     "tags": [
      "scheduling",
@@ -622,20 +636,6 @@
     ]
    },
    {
-    "id": "GM.FileStorage.Catalog",
-    "version": "6.0.0",
-    "downloads": 493,
-    "description": "Workflows for keeping GM.FileStorage files in your database: deleting the bytes queued in the GMStorageCleanup queue (claim, delete, retry with backoff), purging files for good, purging files deleted long ago, checking stored bytes against the catalog (size, SHA-256, decryption, a malware rescan), and filtering files by tenant. Works over your app's GMStoredFile / GMStorageCleanup aggregates and GM.EntityFramework repositories; you schedule the batches. Part of the GM.FileStorage family.",
-    "tags": [
-     "file-storage",
-     "blob-storage",
-     "catalog",
-     "retention",
-     "integrity",
-     "cleanup"
-    ]
-   },
-   {
     "id": "GM.Testing.AspNetCore",
     "version": "1.0.1",
     "downloads": 490,
@@ -666,7 +666,7 @@
    {
     "id": "GM.Secrets.AzureKeyVault",
     "version": "2.0.0",
-    "downloads": 477,
+    "downloads": 481,
     "description": "Azure Key Vault secrets provider for GM.Secrets \u2014 loads a vault's enabled secrets into IConfiguration at startup with DefaultAzureCredential (managed identity in Azure, az login / Visual Studio locally), with optional periodic reload. Db--Password maps to Db:Password. Register with builder.AddGMSecrets(s => s.AddAzureKeyVault()) and select via Secrets:Provider = \"AzureKeyVault\".",
     "tags": [
      "secrets",
@@ -678,9 +678,23 @@
     ]
    },
    {
+    "id": "GM.FileStorage.Catalog.Scheduling",
+    "version": "6.0.0",
+    "downloads": 476,
+    "description": "Scheduled jobs for GM.FileStorage.Catalog on GM.Scheduling: delete the bytes queued for cleanup (every minute), purge files deleted longer ago than a retention period (hourly), and check stored bytes against their records (every 5 minutes). One call registers them for your app's stored-file and cleanup aggregates; batch sizes and retention come from configuration. Part of the GM.FileStorage family.",
+    "tags": [
+     "file-storage",
+     "scheduling",
+     "retention",
+     "integrity",
+     "cleanup",
+     "quartz"
+    ]
+   },
+   {
     "id": "GM.Secrets.Doppler",
     "version": "2.0.0",
-    "downloads": 470,
+    "downloads": 471,
     "description": "Doppler store for GM.Secrets \u2014 downloads a Doppler config's secrets (REST API, no SDK dependency) and loads them into IConfiguration at startup, with optional periodic reload. DB__PASSWORD maps to Db:Password. With a personal or CLI token the app environment picks the config (Development \u2192 dev, Staging \u2192 stg, Production \u2192 prd). Register with builder.AddGMSecrets(s => s.AddDoppler()) and select with the SECRETS_PROVIDER=Doppler environment variable.",
     "tags": [
      "secrets",
@@ -694,7 +708,7 @@
    {
     "id": "GM.Secrets.AwsSecretsManager",
     "version": "2.0.0",
-    "downloads": 468,
+    "downloads": 470,
     "description": "AWS Secrets Manager provider for GM.Secrets \u2014 reads the configured secrets (a JSON secret is flattened into keys, a plain one is keyed by its name) with the AWS SDK's default credential chain, and loads them into IConfiguration at startup, with optional periodic reload. Works with LocalStack/moto via ServiceUrl. Register with builder.AddGMSecrets(s => s.AddAwsSecretsManager()) and select via Secrets:Provider = \"AwsSecretsManager\".",
     "tags": [
      "secrets",
@@ -708,7 +722,7 @@
    {
     "id": "GM.Secrets.Vault",
     "version": "2.0.0",
-    "downloads": 463,
+    "downloads": 465,
     "description": "HashiCorp Vault secrets provider for GM.Secrets \u2014 reads KV v2 paths over Vault's HTTP API (token or AppRole auth, no SDK dependency) and loads them into IConfiguration at startup, with optional periodic reload. Nested values become sections. Register with builder.AddGMSecrets(s => s.AddVault()) and select via Secrets:Provider = \"Vault\".",
     "tags": [
      "secrets",
@@ -750,7 +764,7 @@
    {
     "id": "GM.OTP.Domain",
     "version": "1.2.0",
-    "downloads": 452,
+    "downloads": 453,
     "description": "Domain model for the GM.OTP stack: the OtpChallenge aggregate plus the code-generation, hashing, and clock abstractions. Part of the GM.OTP family.",
     "tags": [
      "otp",
@@ -775,7 +789,7 @@
    {
     "id": "GM.HealthChecks.Caching",
     "version": "1.0.2",
-    "downloads": 441,
+    "downloads": 442,
     "description": "Cache health check for GM.HealthChecks: does a Set/Get/Remove round-trip through GM.Caching's ICacheService, so it verifies whichever backend is registered (in-memory or Redis). Register with AddGMCacheCheck().",
     "tags": [
      "health-checks",
@@ -816,7 +830,7 @@
    {
     "id": "GM.RealTime",
     "version": "1.1.1",
-    "downloads": 426,
+    "downloads": 427,
     "description": "SignalR-based real-time communication for the GM.* ecosystem. IRealTimeSender pushes to users/connections/groups without touching IHubContext directly; a presence-tracking hub registers connections in a shared, lock-guarded registry (GM.Caching + GM.DistributedLock); and the WebSocket handshake reads the JWT from the access_token query string (pairs with GM.Identity). One call: AddGMRealTime().",
     "tags": [
      "realtime",
@@ -830,7 +844,7 @@
    {
     "id": "GM.HealthChecks.Messaging",
     "version": "1.0.2",
-    "downloads": 415,
+    "downloads": 416,
     "description": "RabbitMQ transport health check for GM.HealthChecks: opens a connection using GM.Messaging's configured MessagingOptions and verifies the broker is reachable. Register with AddGMMessagingCheck().",
     "tags": [
      "health-checks",
@@ -844,7 +858,7 @@
    {
     "id": "GM.OTP",
     "version": "1.2.0",
-    "downloads": 400,
+    "downloads": 402,
     "description": "A lightweight, storage-agnostic one-time password (OTP) core for .NET. OtpManager generates and verifies codes over pluggable code-generation, hashing, and clock abstractions, binding each code to its subject and destination. Part of the GM.OTP family.",
     "tags": [
      "otp",
@@ -856,23 +870,9 @@
     ]
    },
    {
-    "id": "GM.FileStorage.Catalog.Scheduling",
-    "version": "6.0.0",
-    "downloads": 371,
-    "description": "Scheduled jobs for GM.FileStorage.Catalog on GM.Scheduling: delete the bytes queued for cleanup (every minute), purge files deleted longer ago than a retention period (hourly), and check stored bytes against their records (every 5 minutes). One call registers them for your app's stored-file and cleanup aggregates; batch sizes and retention come from configuration. Part of the GM.FileStorage family.",
-    "tags": [
-     "file-storage",
-     "scheduling",
-     "retention",
-     "integrity",
-     "cleanup",
-     "quartz"
-    ]
-   },
-   {
     "id": "GM.Secrets.Configuration",
     "version": "1.0.1",
-    "downloads": 365,
+    "downloads": 367,
     "description": "Configuration-backed secrets provider for GM.Secrets \u2014 resolves secrets from IConfiguration (appsettings, user secrets, or any configuration source), optionally under a section. Handy for development and for apps that already surface secrets through configuration. Register with AddGMConfigurationSecrets() and select via Secrets:Provider = \"Configuration\".",
     "tags": [
      "secrets",
@@ -886,7 +886,7 @@
    {
     "id": "GM.Idempotency.Mediator",
     "version": "1.1.0",
-    "downloads": 356,
+    "downloads": 357,
     "description": "GM.Mediator integration for GM.Idempotency: IdempotencyBehavior<TRequest, TResponse>, a pipeline behavior that dedups a request/command before the handler runs \u2014 keyed by an explicit id (IIdempotentRequest, e.g. a RabbitMQ message id) or a hash of the payload ([Idempotent]) \u2014 via the distributed-lock-guarded check-and-set, and replays the stored response on redelivery. For exactly-once handling of at-least-once message delivery (GM.Messaging). Register with AddGMIdempotencyBehavior().",
     "tags": [
      "idempotency",
@@ -1003,6 +1003,18 @@
     ]
    },
    {
+    "id": "GM.Notifications.Email",
+    "version": "1.0.1",
+    "downloads": 316,
+    "description": "Email notification channel for GM.Notifications \u2014 IEmailSenderService, options, and DI wiring (AddEmailNotificationServices).",
+    "tags": [
+     "notifications",
+     "email",
+     "smtp",
+     "dotnet"
+    ]
+   },
+   {
     "id": "GM.Notifications.WhatsApp",
     "version": "1.0.1",
     "downloads": 315,
@@ -1010,18 +1022,6 @@
     "tags": [
      "notifications",
      "whatsapp",
-     "dotnet"
-    ]
-   },
-   {
-    "id": "GM.Notifications.Email",
-    "version": "1.0.1",
-    "downloads": 315,
-    "description": "Email notification channel for GM.Notifications \u2014 IEmailSenderService, options, and DI wiring (AddEmailNotificationServices).",
-    "tags": [
-     "notifications",
-     "email",
-     "smtp",
      "dotnet"
     ]
    },
@@ -1039,7 +1039,7 @@
    {
     "id": "GM.Secrets.Environment",
     "version": "1.0.1",
-    "downloads": 305,
+    "downloads": 308,
     "description": "Environment-variable secrets provider for GM.Secrets \u2014 resolves secrets from environment variables with a configurable prefix and name transform (e.g. \"Db:Password\" \u2192 \"DB_PASSWORD\"). Zero dependencies; ideal for containers and 12-factor apps. Register with AddGMEnvironmentSecrets() and select via Secrets:Provider = \"Environment\".",
     "tags": [
      "secrets",
@@ -1095,7 +1095,7 @@
    {
     "id": "GM.KYC.Identomat",
     "version": "1.0.1",
-    "downloads": 281,
+    "downloads": 283,
     "description": "Identomat provider for GM.KYC. Implements the IKycProvider SPI against Identomat's external API (POST /begin to start a hosted-widget session, /upload-file to attach normalized documents, /result to read the decision) and maps Identomat's approved/rejected/live/similarity vocabulary onto the GM.KYC.Domain status set. The API key (companyKey) is pulled from GM.Secrets \u2014 never hardcoded. Inbound webhook callbacks are signature-verified and deduped via GM.Idempotency (at-least-once delivery). Register with AddGMKyc().AddIdentomat().",
     "tags": [
      "kyc",
@@ -1179,7 +1179,7 @@
    {
     "id": "GM.FeatureManagement.Mediator",
     "version": "1.0.1",
-    "downloads": 269,
+    "downloads": 270,
     "description": "GM.Mediator integration for GM.FeatureManagement: a pipeline behavior that gates command/query handlers behind a feature flag. Mark a request with IFeatureGatedRequest or [FeatureGate(\"Key\")] and the handler runs only when the flag is enabled for the ambient FeatureContext; otherwise a FeatureDisabledException short-circuits the pipeline before the handler. Register with AddGMFeatureGateBehavior().",
     "tags": [
      "feature-flags",
@@ -1416,7 +1416,7 @@
     "description": "",
     "url": "https://github.com/gmetskhvarishvili/gmetskhvarishvili",
     "stars": 0,
-    "pushed_at": "2026-11-12T11:03:48Z",
+    "pushed_at": "2026-11-13T10:56:28Z",
     "language": "Python"
    },
    {
